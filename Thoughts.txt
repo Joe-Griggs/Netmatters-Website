@@ -1,0 +1,8 @@
+for Nav:
+I can do the nav as the top support/contact/
+search and drop box.
+
+i can do the development,support,marketing 
+ect as div containers so its easier.
+
+align items center = center on x and y axis

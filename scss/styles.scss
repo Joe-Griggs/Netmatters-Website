@@ -15,17 +15,30 @@ h1 {
     font-size: 5em;
 }
 
-.main-nav {
+.sec-nav {
     display: flex;
     width: 100%;
+    height: 9em;
     background-color: greenyellow;
 }
 
-.nav-item {
-    padding: 0 3em;
+.nav-items {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: center;
+    border: solid red;
+    list-style: none;
+}
+
+.nav-items li {
+    border: solid blue;
     flex-grow: 2;
+    height: 8em;
 }
 
 #hero {
+    margin-top: 8em;
+    height: 34em;
     background-color: pink;
 }
