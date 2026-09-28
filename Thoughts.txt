@@ -5,4 +5,10 @@ search and drop box.
 i can do the development,support,marketing 
 ect as div containers so its easier.
 
-align items center = center on x and y axis
+align items center = center on x and
+ y axis
+
+Put div around header id header
+
+multiple containers inside each other
+
