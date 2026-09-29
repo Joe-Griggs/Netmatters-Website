@@ -8,7 +8,7 @@ ect as div containers so its easier.
 align items center = center on x and
  y axis
 
-Put div around header id header
+Put div around header "id header"
 
 multiple containers inside each other
 
