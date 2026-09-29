@@ -1,0 +1,21 @@
+.banner {
+    min-height: 500px;
+    background-image: url("../img/building.jpeg");
+    background-color: $bg-sec;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.container h2 {
+    font-size: 40px;
+    color: white;
+}
+
+.container button {
+}
