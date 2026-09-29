@@ -4,8 +4,9 @@
 }
 
 .about h2 {
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 2.3rem;
+    font-weight: $font-weight-semibold;
+    white-space: nowrap;
 }
 
 .about .container {
@@ -15,8 +16,102 @@
 }
 
 .about .container p {
-    font-size: 20px;
+    font-size: 1rem;
     width: 100%;
-    font-weight: lighter;
+    font-weight: $font-weight-normal;
+    letter-spacing: .4px;
     text-align: left;
+}
+
+.welcome-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding-top: 1.5rem;
+}
+
+#why-btn {
+    padding: 16px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba($color: #1b1b1b, $alpha: 35%);
+    border-radius: 6px;
+    border: none;
+}
+
+#culture-btn {
+    padding: 16px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba($color: #1b1b1b, $alpha: 35%);
+    border-radius: 6px;
+    border: none;
+}
+.about blockquote {
+    font-size: 1.3rem;
+    font-weight: $font-weight-semibold;
+    font-style: italic;
+    letter-spacing: .4px;
+    margin: 0;
+}
+
+.about cite {
+    font-size: 1.15rem;
+    font-weight: $font-weight-semibold;
+    font-style: normal;
+    padding-top: 20px;
+}
+
+#quote-name {
+    color: rgb(170, 170, 170);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding-left: 1.5rem;
+    padding-top: 3rem;
+}
+
+#google-rev {
+    padding: 16px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #4387f6;
+    border-radius: 6px;
+    border: none;
+}
+
+#trust-rev {
+    padding: 16px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #00b67b;
+    border-radius: 6px;
+    border: none;
+}
+
+.arrow {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 2px;
+    margin-left: 8px;
+    background-color: white;
+    vertical-align: middle;
+}
+
+.arrow::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
 }

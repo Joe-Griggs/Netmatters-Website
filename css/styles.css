@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 * {
@@ -70,8 +70,9 @@ footer .footer-row .footer-menu h4 {
 }
 
 .about h2 {
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 2.3rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .about .container {
@@ -81,17 +82,111 @@ footer .footer-row .footer-menu h4 {
 }
 
 .about .container p {
-  font-size: 20px;
+  font-size: 1rem;
   width: 100%;
-  font-weight: lighter;
+  font-weight: 400;
+  letter-spacing: 0.4px;
   text-align: left;
+}
+
+.welcome-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding-top: 1.5rem;
+}
+
+#why-btn {
+  padding: 16px 25px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgba(27, 27, 27, 0.35);
+  border-radius: 6px;
+  border: none;
+}
+
+#culture-btn {
+  padding: 16px 25px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgba(27, 27, 27, 0.35);
+  border-radius: 6px;
+  border: none;
+}
+
+.about blockquote {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+.about cite {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-style: normal;
+  padding-top: 20px;
+}
+
+#quote-name {
+  color: rgb(170, 170, 170);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding-left: 1.5rem;
+  padding-top: 3rem;
+}
+
+#google-rev {
+  padding: 16px 25px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #4387f6;
+  border-radius: 6px;
+  border: none;
+}
+
+#trust-rev {
+  padding: 16px 25px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #00b67b;
+  border-radius: 6px;
+  border: none;
+}
+
+.arrow {
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 2px;
+  margin-left: 8px;
+  background-color: white;
+  vertical-align: middle;
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
 }
 
 .banner {
   min-height: 500px;
-  background-image: url("../img/building.jpeg");
-  background-size: cover;
-  background-position: center;
+  background: url("../img/building.jpeg") center/cover rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
 }
 
 .banner .container {
@@ -101,8 +196,9 @@ footer .footer-row .footer-menu h4 {
   padding-top: 6em;
 }
 
-.container h2 {
+.banner .container h2 {
   font-size: 40px;
+  font-weight: 600;
   color: white;
   text-align: center;
   margin-bottom: 0;
@@ -111,9 +207,9 @@ footer .footer-row .footer-menu h4 {
 
 .container p {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   color: white;
-  width: 60%;
+  width: 75%;
   text-align: center;
 }
 
@@ -122,6 +218,30 @@ footer .footer-row .footer-menu h4 {
   font-size: large;
   color: white;
   background-color: #926fb1;
+  border-radius: 4px;
+  border: none;
+}
+
+.arrow {
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 2px;
+  margin-left: 8px;
+  background-color: white;
+  vertical-align: middle;
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=styles.css.map */
