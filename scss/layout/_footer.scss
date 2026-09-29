@@ -58,6 +58,47 @@ footer {
         }
     }
 
+    #nmlogo {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        img {
+            padding-left: 10px;
+        }
+    }
+
+    .social-btn{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 0 0 15px 15px;
+
+        button {
+            padding: 27px 34px;
+            background-color: #22222e;
+            border: none;
+
+
+            &#facebook:hover {
+                background-color: #3b5998;
+            }
+
+            &#in:hover {
+                background-color: #0077b5;
+            }
+
+            &#x:hover {
+                background-color: #00aced;
+            }
+
+            &#instagram:hover {
+                background-color: #d93175;
+            }
+        }
+    }
+
     .socials h4 {
         font-weight: $font-weight-light;
         padding-left: 1rem;

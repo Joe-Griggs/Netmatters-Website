@@ -83,6 +83,38 @@ footer .footer-row .footer-menu h4 {
   font-size: 1rem;
   margin-bottom: 26px;
 }
+footer #nmlogo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+footer #nmlogo img {
+  padding-left: 10px;
+}
+footer .social-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0 0 15px 15px;
+}
+footer .social-btn button {
+  padding: 27px 34px;
+  background-color: #22222e;
+  border: none;
+}
+footer .social-btn button#facebook:hover {
+  background-color: #3b5998;
+}
+footer .social-btn button#in:hover {
+  background-color: #0077b5;
+}
+footer .social-btn button#x:hover {
+  background-color: #00aced;
+}
+footer .social-btn button#instagram:hover {
+  background-color: #d93175;
+}
 footer .socials h4 {
   font-weight: 300;
   padding-left: 1rem;
@@ -130,8 +162,11 @@ footer .copyright p {
   gap: 1.2rem;
   padding-top: 1.5rem;
 }
-
-#why-btn {
+.welcome-btn #why-btn:hover,
+.welcome-btn #culture-btn:hover {
+  background-color: #1b1b1b;
+}
+.welcome-btn #why-btn {
   padding: 16px 25px;
   font-size: 1.2rem;
   color: white;
@@ -139,8 +174,7 @@ footer .copyright p {
   border-radius: 6px;
   border: none;
 }
-
-#culture-btn {
+.welcome-btn #culture-btn {
   padding: 16px 25px;
   font-size: 1.2rem;
   color: white;
@@ -176,8 +210,7 @@ footer .copyright p {
   padding-left: 1.5rem;
   padding-top: 3rem;
 }
-
-#google-rev {
+.buttons #google-rev {
   padding: 16px 25px;
   font-size: 1.2rem;
   color: white;
@@ -185,14 +218,19 @@ footer .copyright p {
   border-radius: 6px;
   border: none;
 }
-
-#trust-rev {
+.buttons #google-rev:hover {
+  background-color: #3970c7;
+}
+.buttons #trust-rev {
   padding: 16px 25px;
   font-size: 1.2rem;
   color: white;
   background-color: #00b67b;
   border-radius: 6px;
   border: none;
+}
+.buttons #trust-rev:hover {
+  background-color: #019264;
 }
 
 .arrow {
