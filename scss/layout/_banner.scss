@@ -1,21 +1,36 @@
 .banner {
     min-height: 500px;
     background-image: url("../img/building.jpeg");
-    background-color: $bg-sec;
     background-size: cover;
     background-position: center;
 }
 
 .banner .container {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6em;
 }
 
 .container h2 {
     font-size: 40px;
     color: white;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
-.container button {
+.container p {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    width: 60%;
+    text-align: center;
+}
+
+.banner .container button {
+    padding: 15px 25px;
+    font-size: large;
+    color: white;
+    background-color: #926fb1;
 }
