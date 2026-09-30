@@ -2,6 +2,7 @@
 
 // Colors
 $bg-sec: #323544;
+$font-sec: #323544;
 
 // Typography
 $font-family-sans-serif: "Poppins", sans-serif;
@@ -24,14 +25,178 @@ $breakpoint-xl: 1260px;
 
 //mixin for service box
 @mixin interact-box {
+    position: relative;
+    top: 0;
+    padding: 1.5rem;
     border: solid 1px rgb(196, 196, 196);
+    border-radius: 16px;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 16px;
-    padding: 1.5rem;
-    top: 0;
-    transition: .5s ease;
+    transition: 0.5s ease;
+
+    h3 {
+        font-size: 22px;
+        font-weight: $font-weight-normal;
+        margin-bottom: 0px;
+    }
+
+    p {
+        font-size: 13px;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+}
+
+
+@mixin image-circle {
+
+
+    .image-circle {
+        width: 65px;
+        height: 65px;
+        border: 2px solid;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+
+        &--dev {
+            border-color: #CE4125;
+            background-color: #CE4125;
+        }
+
+        &--cyber {
+            border-color: #F62459;
+            background-color: #F62459;
+        }
+
+        &--design {
+            border-color: #926FB1;
+            background-color: #926FB1;
+        }
+
+        &--telecom {
+            border-color: #D64541;
+            background-color: #D64541;
+        }
+
+        &--marketing {
+            border-color: #2ECC71;
+            background-color: #2ECC71;
+        }
+
+        &--support {
+            border-color: #4183D7;
+            background-color: #4183D7;
+        }
+
+        &--consult {
+            border-color: #67809F;
+            background-color: #67809F;
+
+        }
+    }
+}
+
+@mixin image-circle-hover {
+
+
+    .image-circle {
+        width: 65px;
+        height: 65px;
+        border: 2px solid;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-color: #ffffff;
+        background-color: #ffffff;
+
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+
+
+        &--dev {
+            svg {
+                fill: #CE4125;
+            }
+        }
+
+        &--cyber {
+            svg {
+                fill: #F62459;
+            }
+        }
+
+        &--design {
+            svg {
+                fill: #926FB1;
+            }
+        }
+
+        &--telecom {
+            svg {
+                fill: #D64541;
+            }
+        }
+
+        &--marketing {
+            svg {
+                fill: #2ECC71;
+            }
+        }
+
+        &--support {
+            svg {
+                fill: #4183D7;
+            }
+        }
+
+        &--consult {
+            svg {
+                fill: #67809F;
+            }
+        }
+    }
+}
+
+
+//Mixin news-box
+
+@mixin news-box {
     position: relative;
+    top: 0;
+    padding: 1.5rem;
+    border: solid 1px rgb(196, 196, 196);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: 0.5s ease;
+
+    h3 {
+        font-size: 22px;
+        font-weight: $font-weight-normal;
+        margin-bottom: 0px;
+    }
+
+    p {
+        font-size: 13px;
+        padding: 10px;
+        margin-top: 5px;
+    }
 }

@@ -99,33 +99,30 @@ footer .social-btn {
   gap: 0.6rem;
   padding: 0 0 15px 15px;
 }
-footer .social-btn button {
-  padding: 27px 34px;
+footer .social-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 54px;
   background-color: #22222e;
-  border: none;
+  color: #fff;
 }
-footer .social-btn button#facebook {
-  background: #22222e url("../icons/facebook.png") center/28px auto no-repeat;
+footer .social-btn a svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
 }
-footer .social-btn button#facebook:hover {
+footer .social-btn a#facebook:hover {
   background-color: #3b5998;
 }
-footer .social-btn button#in {
-  background: #22222e url("../icons/linkedin2.png") center/28px auto no-repeat;
-}
-footer .social-btn button#in:hover {
+footer .social-btn a#in:hover {
   background-color: #0077b5;
 }
-footer .social-btn button#x {
-  background: #22222e url("../icons/x.png") center/28px auto no-repeat;
-}
-footer .social-btn button#x:hover {
+footer .social-btn a#x:hover {
   background-color: #00aced;
 }
-footer .social-btn button#instagram {
-  background: #22222e url("../icons/instagram.png") center/28px auto no-repeat;
-}
-footer .social-btn button#instagram:hover {
+footer .social-btn a#instagram:hover {
   background-color: #d93175;
 }
 footer .socials h4 {
@@ -196,6 +193,19 @@ footer .copyright p {
   border: none;
 }
 
+.stars {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 15px 25px 4px;
+  gap: 3px;
+  color: orange;
+  fill: currentColor;
+}
+.stars svg {
+  width: 50px;
+  height: 50px;
+}
+
 .about blockquote {
   font-size: 1.3rem;
   font-weight: 600;
@@ -249,24 +259,11 @@ footer .copyright p {
 
 .arrow {
   display: inline-block;
-  position: relative;
-  width: 12px;
-  height: 2px;
+  width: 22px;
+  height: 22px;
   margin-left: 8px;
-  background-color: white;
   vertical-align: middle;
-}
-
-.arrow::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  right: 0;
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-  transform: rotate(45deg);
+  fill: currentColor;
 }
 
 .banner {
@@ -307,27 +304,21 @@ footer .copyright p {
   border-radius: 4px;
   border: none;
 }
-
-.arrow {
-  display: inline-block;
-  position: relative;
-  width: 12px;
-  height: 2px;
-  margin-left: 8px;
-  background-color: white;
+.banner .container button .arrow {
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+  fill: currentColor;
   vertical-align: middle;
 }
 
-.arrow::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  right: 0;
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-  transform: rotate(45deg);
+.arrow {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: 8px;
+  vertical-align: middle;
+  fill: currentColor;
 }
 
 .clients {
@@ -354,34 +345,134 @@ footer .copyright p {
   padding: 15px;
   gap: 2rem;
 }
+.services > a {
+  display: block;
+  flex: 1 1 260px;
+  align-self: stretch;
+  color: inherit;
+  text-decoration: none;
+}
+.services > a > div {
+  height: 100%;
+}
 .services h2 {
   font-size: 2.8rem;
   font-weight: 400;
+  color: #323544;
   white-space: nowrap;
 }
-.services button {
+.services .read-more {
   display: flex;
   justify-content: center;
   flex-direction: row;
   border: none;
   border-radius: 4px;
   color: white;
+  font-size: 17px;
   padding: 13px;
 }
 .services #con-dev {
+  position: relative;
+  top: 0;
+  padding: 1.5rem;
   border: solid 1px rgb(196, 196, 196);
+  border-radius: 16px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 16px;
-  padding: 1.5rem;
-  top: 0;
   transition: 0.5s ease;
-  position: relative;
 }
-.services #con-dev button {
+.services #con-dev h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.services #con-dev p {
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.services #con-dev .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services #con-dev .image-circle svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.services #con-dev .image-circle--dev {
+  border-color: #CE4125;
+  background-color: #CE4125;
+}
+.services #con-dev .image-circle--cyber {
+  border-color: #F62459;
+  background-color: #F62459;
+}
+.services #con-dev .image-circle--design {
+  border-color: #926FB1;
+  background-color: #926FB1;
+}
+.services #con-dev .image-circle--telecom {
+  border-color: #D64541;
+  background-color: #D64541;
+}
+.services #con-dev .image-circle--marketing {
+  border-color: #2ECC71;
+  background-color: #2ECC71;
+}
+.services #con-dev .image-circle--support {
+  border-color: #4183D7;
+  background-color: #4183D7;
+}
+.services #con-dev .image-circle--consult {
+  border-color: #67809F;
+  background-color: #67809F;
+}
+.services #con-dev .read-more {
   background-color: #F7B322;
+}
+.services #con-dev:hover .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+.services #con-dev:hover .image-circle svg {
+  width: 30px;
+  height: 30px;
+}
+.services #con-dev:hover .image-circle--dev svg {
+  fill: #CE4125;
+}
+.services #con-dev:hover .image-circle--cyber svg {
+  fill: #F62459;
+}
+.services #con-dev:hover .image-circle--design svg {
+  fill: #926FB1;
+}
+.services #con-dev:hover .image-circle--telecom svg {
+  fill: #D64541;
+}
+.services #con-dev:hover .image-circle--marketing svg {
+  fill: #2ECC71;
+}
+.services #con-dev:hover .image-circle--support svg {
+  fill: #4183D7;
+}
+.services #con-dev:hover .image-circle--consult svg {
+  fill: #67809F;
 }
 .services #con-dev:hover {
   top: -10px;
@@ -389,24 +480,112 @@ footer .copyright p {
   background-color: #67809F;
   color: white;
 }
-.services #con-dev:hover button {
+.services #con-dev:hover .read-more {
   background-color: white;
   color: #67809F;
 }
 .services #it-support {
+  position: relative;
+  top: 0;
+  padding: 1.5rem;
   border: solid 1px rgb(196, 196, 196);
+  border-radius: 16px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 16px;
-  padding: 1.5rem;
-  top: 0;
   transition: 0.5s ease;
-  position: relative;
 }
-.services #it-support button {
+.services #it-support h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.services #it-support p {
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.services #it-support .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services #it-support .image-circle svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.services #it-support .image-circle--dev {
+  border-color: #CE4125;
+  background-color: #CE4125;
+}
+.services #it-support .image-circle--cyber {
+  border-color: #F62459;
+  background-color: #F62459;
+}
+.services #it-support .image-circle--design {
+  border-color: #926FB1;
+  background-color: #926FB1;
+}
+.services #it-support .image-circle--telecom {
+  border-color: #D64541;
+  background-color: #D64541;
+}
+.services #it-support .image-circle--marketing {
+  border-color: #2ECC71;
+  background-color: #2ECC71;
+}
+.services #it-support .image-circle--support {
+  border-color: #4183D7;
   background-color: #4183D7;
+}
+.services #it-support .image-circle--consult {
+  border-color: #67809F;
+  background-color: #67809F;
+}
+.services #it-support .read-more {
+  background-color: #4183D7;
+}
+.services #it-support:hover .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+.services #it-support:hover .image-circle svg {
+  width: 30px;
+  height: 30px;
+}
+.services #it-support:hover .image-circle--dev svg {
+  fill: #CE4125;
+}
+.services #it-support:hover .image-circle--cyber svg {
+  fill: #F62459;
+}
+.services #it-support:hover .image-circle--design svg {
+  fill: #926FB1;
+}
+.services #it-support:hover .image-circle--telecom svg {
+  fill: #D64541;
+}
+.services #it-support:hover .image-circle--marketing svg {
+  fill: #2ECC71;
+}
+.services #it-support:hover .image-circle--support svg {
+  fill: #4183D7;
+}
+.services #it-support:hover .image-circle--consult svg {
+  fill: #67809F;
 }
 .services #it-support:hover {
   top: -10px;
@@ -414,24 +593,112 @@ footer .copyright p {
   background-color: #4183D7;
   color: white;
 }
-.services #it-support:hover button {
+.services #it-support:hover .read-more {
   background-color: white;
   color: #4183D7;
 }
 .services #marketing {
+  position: relative;
+  top: 0;
+  padding: 1.5rem;
   border: solid 1px rgb(196, 196, 196);
+  border-radius: 16px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 16px;
-  padding: 1.5rem;
-  top: 0;
   transition: 0.5s ease;
-  position: relative;
 }
-.services #marketing button {
+.services #marketing h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.services #marketing p {
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.services #marketing .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services #marketing .image-circle svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.services #marketing .image-circle--dev {
+  border-color: #CE4125;
+  background-color: #CE4125;
+}
+.services #marketing .image-circle--cyber {
+  border-color: #F62459;
+  background-color: #F62459;
+}
+.services #marketing .image-circle--design {
+  border-color: #926FB1;
+  background-color: #926FB1;
+}
+.services #marketing .image-circle--telecom {
+  border-color: #D64541;
+  background-color: #D64541;
+}
+.services #marketing .image-circle--marketing {
+  border-color: #2ECC71;
   background-color: #2ECC71;
+}
+.services #marketing .image-circle--support {
+  border-color: #4183D7;
+  background-color: #4183D7;
+}
+.services #marketing .image-circle--consult {
+  border-color: #67809F;
+  background-color: #67809F;
+}
+.services #marketing .read-more {
+  background-color: #2ECC71;
+}
+.services #marketing:hover .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+.services #marketing:hover .image-circle svg {
+  width: 30px;
+  height: 30px;
+}
+.services #marketing:hover .image-circle--dev svg {
+  fill: #CE4125;
+}
+.services #marketing:hover .image-circle--cyber svg {
+  fill: #F62459;
+}
+.services #marketing:hover .image-circle--design svg {
+  fill: #926FB1;
+}
+.services #marketing:hover .image-circle--telecom svg {
+  fill: #D64541;
+}
+.services #marketing:hover .image-circle--marketing svg {
+  fill: #2ECC71;
+}
+.services #marketing:hover .image-circle--support svg {
+  fill: #4183D7;
+}
+.services #marketing:hover .image-circle--consult svg {
+  fill: #67809F;
 }
 .services #marketing:hover {
   top: -10px;
@@ -439,24 +706,112 @@ footer .copyright p {
   background-color: #2ECC71;
   color: white;
 }
-.services #marketing:hover button {
+.services #marketing:hover .read-more {
   background-color: white;
   color: #2ECC71;
 }
 .services #telecoms {
+  position: relative;
+  top: 0;
+  padding: 1.5rem;
   border: solid 1px rgb(196, 196, 196);
+  border-radius: 16px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 16px;
-  padding: 1.5rem;
-  top: 0;
   transition: 0.5s ease;
-  position: relative;
 }
-.services #telecoms button {
+.services #telecoms h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.services #telecoms p {
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.services #telecoms .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services #telecoms .image-circle svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.services #telecoms .image-circle--dev {
+  border-color: #CE4125;
+  background-color: #CE4125;
+}
+.services #telecoms .image-circle--cyber {
+  border-color: #F62459;
+  background-color: #F62459;
+}
+.services #telecoms .image-circle--design {
+  border-color: #926FB1;
+  background-color: #926FB1;
+}
+.services #telecoms .image-circle--telecom {
+  border-color: #D64541;
   background-color: #D64541;
+}
+.services #telecoms .image-circle--marketing {
+  border-color: #2ECC71;
+  background-color: #2ECC71;
+}
+.services #telecoms .image-circle--support {
+  border-color: #4183D7;
+  background-color: #4183D7;
+}
+.services #telecoms .image-circle--consult {
+  border-color: #67809F;
+  background-color: #67809F;
+}
+.services #telecoms .read-more {
+  background-color: #D64541;
+}
+.services #telecoms:hover .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+.services #telecoms:hover .image-circle svg {
+  width: 30px;
+  height: 30px;
+}
+.services #telecoms:hover .image-circle--dev svg {
+  fill: #CE4125;
+}
+.services #telecoms:hover .image-circle--cyber svg {
+  fill: #F62459;
+}
+.services #telecoms:hover .image-circle--design svg {
+  fill: #926FB1;
+}
+.services #telecoms:hover .image-circle--telecom svg {
+  fill: #D64541;
+}
+.services #telecoms:hover .image-circle--marketing svg {
+  fill: #2ECC71;
+}
+.services #telecoms:hover .image-circle--support svg {
+  fill: #4183D7;
+}
+.services #telecoms:hover .image-circle--consult svg {
+  fill: #67809F;
 }
 .services #telecoms:hover {
   top: -10px;
@@ -464,24 +819,112 @@ footer .copyright p {
   background-color: #D64541;
   color: white;
 }
-.services #telecoms:hover button {
+.services #telecoms:hover .read-more {
   background-color: white;
   color: #D64541;
 }
 .services #design {
+  position: relative;
+  top: 0;
+  padding: 1.5rem;
   border: solid 1px rgb(196, 196, 196);
+  border-radius: 16px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 16px;
-  padding: 1.5rem;
-  top: 0;
   transition: 0.5s ease;
-  position: relative;
 }
-.services #design button {
+.services #design h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.services #design p {
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.services #design .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services #design .image-circle svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.services #design .image-circle--dev {
+  border-color: #CE4125;
+  background-color: #CE4125;
+}
+.services #design .image-circle--cyber {
+  border-color: #F62459;
+  background-color: #F62459;
+}
+.services #design .image-circle--design {
+  border-color: #926FB1;
   background-color: #926FB1;
+}
+.services #design .image-circle--telecom {
+  border-color: #D64541;
+  background-color: #D64541;
+}
+.services #design .image-circle--marketing {
+  border-color: #2ECC71;
+  background-color: #2ECC71;
+}
+.services #design .image-circle--support {
+  border-color: #4183D7;
+  background-color: #4183D7;
+}
+.services #design .image-circle--consult {
+  border-color: #67809F;
+  background-color: #67809F;
+}
+.services #design .read-more {
+  background-color: #926FB1;
+}
+.services #design:hover .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+.services #design:hover .image-circle svg {
+  width: 30px;
+  height: 30px;
+}
+.services #design:hover .image-circle--dev svg {
+  fill: #CE4125;
+}
+.services #design:hover .image-circle--cyber svg {
+  fill: #F62459;
+}
+.services #design:hover .image-circle--design svg {
+  fill: #926FB1;
+}
+.services #design:hover .image-circle--telecom svg {
+  fill: #D64541;
+}
+.services #design:hover .image-circle--marketing svg {
+  fill: #2ECC71;
+}
+.services #design:hover .image-circle--support svg {
+  fill: #4183D7;
+}
+.services #design:hover .image-circle--consult svg {
+  fill: #67809F;
 }
 .services #design:hover {
   top: -10px;
@@ -489,24 +932,112 @@ footer .copyright p {
   background-color: #926FB1;
   color: white;
 }
-.services #design:hover button {
+.services #design:hover .read-more {
   background-color: white;
   color: #926FB1;
 }
 .services #cyber {
+  position: relative;
+  top: 0;
+  padding: 1.5rem;
   border: solid 1px rgb(196, 196, 196);
+  border-radius: 16px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 16px;
-  padding: 1.5rem;
-  top: 0;
   transition: 0.5s ease;
-  position: relative;
 }
-.services #cyber button {
+.services #cyber h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.services #cyber p {
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.services #cyber .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services #cyber .image-circle svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.services #cyber .image-circle--dev {
+  border-color: #CE4125;
+  background-color: #CE4125;
+}
+.services #cyber .image-circle--cyber {
+  border-color: #F62459;
   background-color: #F62459;
+}
+.services #cyber .image-circle--design {
+  border-color: #926FB1;
+  background-color: #926FB1;
+}
+.services #cyber .image-circle--telecom {
+  border-color: #D64541;
+  background-color: #D64541;
+}
+.services #cyber .image-circle--marketing {
+  border-color: #2ECC71;
+  background-color: #2ECC71;
+}
+.services #cyber .image-circle--support {
+  border-color: #4183D7;
+  background-color: #4183D7;
+}
+.services #cyber .image-circle--consult {
+  border-color: #67809F;
+  background-color: #67809F;
+}
+.services #cyber .read-more {
+  background-color: #F62459;
+}
+.services #cyber:hover .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+.services #cyber:hover .image-circle svg {
+  width: 30px;
+  height: 30px;
+}
+.services #cyber:hover .image-circle--dev svg {
+  fill: #CE4125;
+}
+.services #cyber:hover .image-circle--cyber svg {
+  fill: #F62459;
+}
+.services #cyber:hover .image-circle--design svg {
+  fill: #926FB1;
+}
+.services #cyber:hover .image-circle--telecom svg {
+  fill: #D64541;
+}
+.services #cyber:hover .image-circle--marketing svg {
+  fill: #2ECC71;
+}
+.services #cyber:hover .image-circle--support svg {
+  fill: #4183D7;
+}
+.services #cyber:hover .image-circle--consult svg {
+  fill: #67809F;
 }
 .services #cyber:hover {
   top: -10px;
@@ -514,24 +1045,112 @@ footer .copyright p {
   background-color: #F62459;
   color: white;
 }
-.services #cyber:hover button {
+.services #cyber:hover .read-more {
   background-color: white;
   color: #F62459;
 }
 .services #developer {
+  position: relative;
+  top: 0;
+  padding: 1.5rem;
   border: solid 1px rgb(196, 196, 196);
+  border-radius: 16px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 16px;
-  padding: 1.5rem;
-  top: 0;
   transition: 0.5s ease;
-  position: relative;
 }
-.services #developer button {
+.services #developer h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.services #developer p {
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.services #developer .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services #developer .image-circle svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.services #developer .image-circle--dev {
+  border-color: #CE4125;
   background-color: #CE4125;
+}
+.services #developer .image-circle--cyber {
+  border-color: #F62459;
+  background-color: #F62459;
+}
+.services #developer .image-circle--design {
+  border-color: #926FB1;
+  background-color: #926FB1;
+}
+.services #developer .image-circle--telecom {
+  border-color: #D64541;
+  background-color: #D64541;
+}
+.services #developer .image-circle--marketing {
+  border-color: #2ECC71;
+  background-color: #2ECC71;
+}
+.services #developer .image-circle--support {
+  border-color: #4183D7;
+  background-color: #4183D7;
+}
+.services #developer .image-circle--consult {
+  border-color: #67809F;
+  background-color: #67809F;
+}
+.services #developer .read-more {
+  background-color: #CE4125;
+}
+.services #developer:hover .image-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+.services #developer:hover .image-circle svg {
+  width: 30px;
+  height: 30px;
+}
+.services #developer:hover .image-circle--dev svg {
+  fill: #CE4125;
+}
+.services #developer:hover .image-circle--cyber svg {
+  fill: #F62459;
+}
+.services #developer:hover .image-circle--design svg {
+  fill: #926FB1;
+}
+.services #developer:hover .image-circle--telecom svg {
+  fill: #D64541;
+}
+.services #developer:hover .image-circle--marketing svg {
+  fill: #2ECC71;
+}
+.services #developer:hover .image-circle--support svg {
+  fill: #4183D7;
+}
+.services #developer:hover .image-circle--consult svg {
+  fill: #67809F;
 }
 .services #developer:hover {
   top: -10px;
@@ -539,7 +1158,7 @@ footer .copyright p {
   background-color: #CE4125;
   color: white;
 }
-.services #developer:hover button {
+.services #developer:hover .read-more {
   background-color: white;
   color: #CE4125;
 }
@@ -555,23 +1174,78 @@ footer .copyright p {
 }
 .services #view-work .arrow {
   display: inline-block;
-  position: relative;
-  width: 17px;
-  height: 3px;
+  width: 24px;
+  height: 24px;
   margin-left: 8px;
-  background-color: #323544;
-  vertical-align: middle;
+  vertical-align: top;
+  fill: currentColor;
 }
-.services #view-work .arrow::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  right: 0;
-  width: 8px;
-  height: 8px;
-  border-top: 3px solid #323544;
-  border-right: 3px solid #323544;
-  transform: rotate(45deg);
+.services #view-work a {
+  text-decoration: none;
+  color: #323544;
+  padding-bottom: 5px;
+}
+.services #view-work a:hover {
+  text-decoration: underline;
+}
+
+.latest-news {
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  text-align: start;
+  margin: 0;
+  padding: 15px;
+  gap: 2rem;
+}
+.latest-news > a {
+  display: block;
+  flex: 1 1 260px;
+  align-self: stretch;
+  color: inherit;
+  text-decoration: none;
+}
+.latest-news > a > div {
+  height: 100%;
+}
+.latest-news h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #323544;
+  white-space: nowrap;
+}
+.latest-news .read-more {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border: none;
+  border-radius: 4px;
+  color: rgb(255, 0, 0);
+  font-size: 17px;
+  padding: 13px;
+}
+.latest-news .news {
+  position: relative;
+  top: 0;
+  padding: 1.5rem;
+  border: solid 1px rgb(196, 196, 196);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: 0.5s ease;
+}
+.latest-news .news h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.latest-news .news p {
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

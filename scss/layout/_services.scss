@@ -9,36 +9,54 @@
     padding: 15px;
     gap: 2rem;
 
+
+    > a {
+        display: block;
+        flex: 1 1 260px;
+        align-self: stretch;
+        color: inherit;
+        text-decoration: none;
+
+        > div {
+            height: 100%;
+        }
+    }
+
     h2 {
         font-size: 2.8rem;
         font-weight: $font-weight-normal;
+        color: $font-sec;
         white-space: nowrap;
     }
 
-    button {
+    .read-more {
         display: flex;
         justify-content: center;
         flex-direction: row;
         border: none;
         border-radius: 4px;
-        color: white;;
+        color: white;
+        font-size: 17px;
         padding: 13px;
     }
 
+
     #con-dev {
         @include interact-box;
+        @include image-circle;
         
-        button {
+        .read-more {
             background-color: #F7B322;
         }
 
         &:hover {
+            @include image-circle-hover;
             top: -10px;
             transition: .5s ease;
             background-color: #67809F;
             color: white;
 
-            button {
+            .read-more {
                 background-color: white;
                 color:#67809F;
 
@@ -48,18 +66,20 @@
 
     #it-support {
         @include interact-box;
+        @include image-circle;
 
-        button {
+        .read-more {
             background-color: #4183D7;
         }
 
         &:hover {
+            @include image-circle-hover;
             top: -10px;
             transition: .5s ease;
             background-color: #4183D7;
             color: white;
 
-            button {
+            .read-more {
                 background-color: white;
                 color: #4183D7;
             }
@@ -68,18 +88,20 @@
 
     #marketing {
         @include interact-box;
+        @include image-circle;
 
-        button {
+        .read-more {
             background-color: #2ECC71;
         }
 
         &:hover {
+            @include image-circle-hover;
             top: -10px;
             transition: .5s ease;
             background-color: #2ECC71;
             color: white;
 
-            button {
+            .read-more {
                 background-color: white;
                 color: #2ECC71;
             }
@@ -88,18 +110,20 @@
 
     #telecoms {
         @include interact-box;
+        @include image-circle;
 
-        button {
+        .read-more {
             background-color: #D64541;
         }
 
         &:hover {
+            @include image-circle-hover;
             top: -10px;
             transition: .5s ease;
             background-color: #D64541;
             color: white;
 
-            button {
+            .read-more {
                 background-color: white;
                 color: #D64541;
             }
@@ -108,18 +132,20 @@
 
     #design {
         @include interact-box;
+        @include image-circle;
 
-        button {
+        .read-more {
             background-color: #926FB1;
         }
 
         &:hover {
+            @include image-circle-hover;
             top: -10px;
             transition: .5s ease;
             background-color: #926FB1;
             color: white;
 
-            button {
+            .read-more {
                 background-color: white;
                 color: #926FB1;
             }
@@ -128,18 +154,20 @@
 
     #cyber {
         @include interact-box;
+        @include image-circle;
 
-        button {
+        .read-more {
             background-color: #F62459;
         }
 
         &:hover {
+            @include image-circle-hover;
             top: -10px;
             transition: .5s ease;
             background-color: #F62459;
             color: white;
 
-            button {
+            .read-more {
                 background-color: white;
                 color: #F62459;
             }
@@ -148,18 +176,20 @@
 
     #developer {
         @include interact-box;
+        @include image-circle;
 
-        button {
+        .read-more {
             background-color: #CE4125;
         }
 
         &:hover {
+            @include image-circle-hover;
             top: -10px;
             transition: .5s ease;
             background-color: #CE4125;
             color: white;
 
-            button {
+            .read-more {
                 background-color: white;
                 color: #CE4125;
             }
@@ -169,7 +199,7 @@
     #view-work {
         font-size: 1.5rem;
         font-weight: $font-weight-semibold;
-        color: $bg-sec;
+        color: $font-sec;
         border: none;
         background-color: rgb(247, 247, 247);
         align-items: center;
@@ -178,25 +208,21 @@
 
         .arrow {
             display: inline-block;
-            position: relative;
-            width: 17px;
-            height: 3px;
+            width: 24px;
+            height: 24px;
             margin-left: 8px;
-            background-color: $bg-sec;
-            vertical-align: middle;
+            vertical-align: top;
+            fill: currentColor;
         }
 
-    .arrow::after {
-        content: "";
-            position: absolute;
-            top: -4px;
-            right: 0;
-            width: 8px;
-            height: 8px;
-            border-top: 3px solid $bg-sec;
-            border-right: 3px solid $bg-sec;
-            transform: rotate(45deg);
-        }
-    }
+        & a {
+            text-decoration: none;
+            color: $font-sec;
+            padding-bottom: 5px;
 
+            &:hover {
+                text-decoration: underline;
+            }
+        } 
+    }  
 }

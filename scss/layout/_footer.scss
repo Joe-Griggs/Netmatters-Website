@@ -76,38 +76,31 @@ footer {
         gap: 0.6rem;
         padding: 0 0 15px 15px;
 
-        button {
-            padding: 27px 34px;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 68px;
+            height: 54px;
             background-color: #22222e;
-            border: none;
+            color: #fff;
 
-
-            &#facebook {
-                background: #22222e url("../icons/facebook.png") center / 28px auto no-repeat;
+            svg {
+                width: 28px;
+                height: 28px;
+                fill: currentColor;
             }
-            
+
             &#facebook:hover {
                 background-color: #3b5998;
-            }
-
-            &#in {
-                background: #22222e url("../icons/linkedin2.png") center / 28px auto no-repeat;
             }
 
             &#in:hover {
                 background-color: #0077b5;
             }
 
-            &#x {
-                background: #22222e url("../icons/x.png") center / 28px auto no-repeat;
-            }
-
             &#x:hover {
                 background-color: #00aced;
-            }
-
-            &#instagram {
-                background: #22222e url("../icons/instagram.png") center / 28px auto no-repeat;
             }
 
             &#instagram:hover {
