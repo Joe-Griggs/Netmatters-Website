@@ -1,0 +1,13 @@
+.clients {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 3em 0;
+    gap: 4em;
+    
+    img {
+        width: 100%;
+    }
+}

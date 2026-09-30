@@ -90,6 +90,7 @@ footer #nmlogo {
 }
 footer #nmlogo img {
   padding-left: 10px;
+  width: 21em;
 }
 footer .social-btn {
   display: flex;
@@ -103,14 +104,26 @@ footer .social-btn button {
   background-color: #22222e;
   border: none;
 }
+footer .social-btn button#facebook {
+  background: #22222e url("../icons/facebook.png") center/28px auto no-repeat;
+}
 footer .social-btn button#facebook:hover {
   background-color: #3b5998;
+}
+footer .social-btn button#in {
+  background: #22222e url("../icons/linkedin2.png") center/28px auto no-repeat;
 }
 footer .social-btn button#in:hover {
   background-color: #0077b5;
 }
+footer .social-btn button#x {
+  background: #22222e url("../icons/x.png") center/28px auto no-repeat;
+}
 footer .social-btn button#x:hover {
   background-color: #00aced;
+}
+footer .social-btn button#instagram {
+  background: #22222e url("../icons/instagram.png") center/28px auto no-repeat;
 }
 footer .social-btn button#instagram:hover {
   background-color: #d93175;
@@ -209,6 +222,7 @@ footer .copyright p {
   gap: 1.2rem;
   padding-left: 1.5rem;
   padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .buttons #google-rev {
   padding: 16px 25px;
@@ -314,6 +328,108 @@ footer .copyright p {
   border-top: 2px solid white;
   border-right: 2px solid white;
   transform: rotate(45deg);
+}
+
+.clients {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 3em 0;
+  gap: 4em;
+}
+.clients img {
+  width: 100%;
+}
+
+.services {
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin: 15px;
+  gap: 2rem;
+}
+.services h2 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.services button {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 13px;
+}
+.services #con-dev {
+  border: solid red;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.services #it-support {
+  border: solid red;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.services #marketing {
+  border: solid red;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.services #telecoms {
+  border: solid red;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.services #design {
+  border: solid red;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.services #cyber {
+  border: solid red;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.services #developer {
+  border: solid red;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.services #view-work {
+  width: fit-content;
+  margin-inline: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

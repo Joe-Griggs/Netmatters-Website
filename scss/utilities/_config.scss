@@ -20,3 +20,15 @@ $breakpoint-s: 480px;
 $breakpoint-m: 768px;
 $breakpoint-l: 992px;
 $breakpoint-xl: 1260px; 
+
+
+//mixin for service box
+@mixin interact-box {
+    border: solid red;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    padding: 1.5rem;
+}
