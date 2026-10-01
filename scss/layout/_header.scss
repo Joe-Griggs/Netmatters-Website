@@ -4,15 +4,21 @@
     box-sizing: border-box;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.6rem;
     padding: 0 0 15px 15px;
     margin-top: 25px;
 
     #header-logo {
+
     }
 
     #contact {
+        padding: 0 9px;
 
+        a {
+            width: 40px;
+            padding: 0;
+            justify-content: center;
+        }
     }
 
     a {
@@ -28,21 +34,31 @@
             height: 28px;
             fill: currentColor;
         }
+
     }
 
     #nav-toggle {
         display: none;
     }
 
+        .hamburger {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            cursor: pointer;
+            width: 60px;
+            height: 55px;
+            background-color: $bg-sec;
+            border-radius: 4px;
+    }
+
     .hamburger svg {
         display: block;
         width: 40px;
         height: 32px;
-    }
+        fill: white;
 
-    .hamburger {
-        font-size: 30px;
-        cursor: pointer;
     }
 
     .search{
@@ -54,6 +70,10 @@
             display: block;
             box-sizing: border-box;
             flex: 1 1 auto;
+            padding: 13px;
+            background-color: rgb(228, 228, 228);
+            border: solid 2px rgb(202, 202, 202) ;
+            font-weight: $font-weight-semibold;
         }
     }
 }
