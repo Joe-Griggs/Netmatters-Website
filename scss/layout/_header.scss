@@ -1,0 +1,71 @@
+.header-top{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0 0 15px 15px;
+    margin-top: 25px;
+
+    #header-logo {
+    }
+
+    #contact {
+
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        width: 68px;
+        height: 54px;
+        padding:0 10px;
+        color: $font-sec;
+
+        svg {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
+        }
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+
+    .hamburger svg {
+        display: block;
+        width: 40px;
+        height: 32px;
+    }
+
+    .hamburger {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .search{
+        display: flex;
+        flex: 1 1 100%;
+        padding: em(10px) em(15px);
+
+        #search-bar {
+            display: block;
+            box-sizing: border-box;
+            flex: 1 1 auto;
+        }
+    }
+}
+
+
+#header-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    img {
+        padding-left: 10px;
+        width: 21em;
+    }
+}

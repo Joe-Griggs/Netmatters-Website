@@ -6,12 +6,15 @@ $font-sec: #323544;
 
 // Typography
 $font-family-sans-serif: "Poppins", sans-serif;
+
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-extrabold: 800;
+
+$base__font-size: 16px;
 
 
 
@@ -21,6 +24,14 @@ $breakpoint-s: 480px;
 $breakpoint-m: 768px;
 $breakpoint-l: 992px;
 $breakpoint-xl: 1260px; 
+
+
+
+
+//px to em
+@function em($target, $context: $base__font-size) {
+    @return ($target / $context) * 1em;
+}
 
 
 //mixin for service box
@@ -180,7 +191,6 @@ $breakpoint-xl: 1260px;
 @mixin news-box {
     position: relative;
     top: 0;
-    padding: 1.5rem;
     border: solid 1px rgb(196, 196, 196);
     background-color: white;
     display: flex;
@@ -189,14 +199,24 @@ $breakpoint-xl: 1260px;
     transition: 0.5s ease;
 
     h3 {
-        font-size: 22px;
-        font-weight: $font-weight-normal;
-        margin-bottom: 0px;
+        font-size: em(17px);
+        font-weight: $font-weight-semibold;
+        color: #67809F;
+        margin: 25px 1.8rem 12px 1.8rem;
     }
 
     p {
         font-size: 13px;
-        padding: 10px;
+        padding: 12px 0px;
         margin-top: 5px;
+        margin: 0px 1.8rem;
+        color: #646464;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        
     }
 }

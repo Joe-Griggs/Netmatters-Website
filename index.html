@@ -10,20 +10,26 @@
         <title>Netmatters Homepage</title>
     </head>
     <body>
-        <div id="header">
-            <header id="top">
-                <h1>Netmatters</h1> <!--Header hides when scrolling down and appears when coming up-->
+        <div class="header">
+            <header class="header-top">
+                <div id="header-logo">
+                    <img src="img/nmlogoblue.png" alt="Netmatters Logo">
+                </div> <!--Header hides when scrolling down and appears when coming up-->
+                <div id="contact">
+                    <a id="head-contact" href="#" aria-label="contact">
+                        <svg aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-phone"></use></svg>
+                    </a>
+                </div>
+                <div id="side-nav">
+                    <input type="checkbox" id="nav-toggle">
+                    <label for="nav-toggle" class="hamburger"><svg aria-hidden="true" viewBox="0 0 40 32"><use href="SVG/symbol-defs.svg#icon-menu"></use></svg></label>
+                </div>
+                    <div class="search">
+                        <input type="search" id="search-bar" placeholder="Search..."/>
+                    </div>
             </header>
             <div class="main-nav">
-                <ul class="box-navs">
-                    <li id="development">Development</li>
-                    <li id="support">Support</li>
-                    <li id="marketing">Marketing</li>
-                    <li id="services">Service</li>
-                    <li id="design">Design</li>
-                    <li id="security">Security</li>
-                    <li id="course">Course</li>
-                </ul>
+
             </div>
         </div>
         <main>
@@ -152,11 +158,46 @@
 
             <section class="latest-news"><!--2 latest news articles-->
                 <h2>Latest News</h2>
-                <div class="news">
-                    <h3>How Much Could Bespoke Software Add to Your E...</h3>
-                    <p>If you’re a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
-                    <span class="read-more">READ MORE</span>
-                </div>
+                <a href="#">
+                    <div class="news">
+                        <img src="img/bespoke-software.jpeg" alt="talking about software">
+                        <h3>How Much Could Bespoke Software Add to Your E...</h3>
+                        <p>If you’re a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
+                        <span class="read-more">READ MORE</span>
+                        <div class="posts">
+                            <img id="avatar" src="img/netmatters-avatar.png" alt="avatar of netmatters">
+                            <p id="posted">Posted by Netmatters</p>
+                            <p id="date">27th June 2025</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="news">
+                        <img src="img/ai-intergration.jpeg" alt="ai ai-integration">
+                        <h3>How Can AI Benefit My Business?</h3>
+                        <p>The idea of integrating AI into your business operations may seem daunting, but there are undeniable...</p>
+                        <span class="read-more">READ MORE</span>
+                        <div class="posts">
+                            <img id="avatar" src="img/netmatters-avatar.png" alt="avatar of netmatters">
+                            <p id="posted">Posted by Netmatters</p>
+                            <p id="date">26th June 2025</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="career">
+                        <img src="img/1stline.png" alt="job offer">
+                        <h3>1st Line Technician</h3>
+                        <p>Salary Range £25,000 -£29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham,...</p>
+                        <span class="read-more">READ MORE</span>
+                        <div class="posts">
+                            <img id="avatar" src="img/netmatters-avatar.png" alt="avatar of netmatters">
+                            <p id="posted">Posted by Bethany Shakespeare</p>
+                            <p id="date">20th June 2025</p>
+                        </div>
+                    </div>
+                </a>
+                <button id="view-all"><a href="#">View All<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></a></button>
             </section>
 
         </main>
