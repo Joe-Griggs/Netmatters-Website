@@ -206,6 +206,14 @@ footer .copyright p {
   height: 50px;
 }
 
+#quote-comp {
+  color: #fff;
+  text-decoration: none;
+}
+#quote-comp:hover {
+  text-decoration: underline;
+}
+
 .about blockquote {
   font-size: 1.3rem;
   font-weight: 600;
@@ -361,6 +369,7 @@ footer .copyright p {
   font-weight: 400;
   color: #323544;
   white-space: nowrap;
+  margin-bottom: 0em;
 }
 .services .read-more {
   display: flex;
@@ -1398,6 +1407,9 @@ footer .copyright p {
   height: 28px;
   fill: currentColor;
 }
+.header-top a svg:hover {
+  border-bottom: solid 1px #323544;
+}
 .header-top #nav-toggle {
   display: none;
 }
@@ -1412,6 +1424,9 @@ footer .copyright p {
   background-color: #323544;
   border-radius: 4px;
 }
+.header-top .hamburger:hover {
+  background-color: #1a1e30;
+}
 .header-top .hamburger svg {
   display: block;
   width: 40px;
@@ -1421,7 +1436,7 @@ footer .copyright p {
 .header-top .search {
   display: flex;
   flex: 1 1 100%;
-  padding: 0.625em 0.9375em;
+  padding: 0.9375em 0.9375em 0.25em 0.9375em;
 }
 .header-top .search #search-bar {
   display: block;

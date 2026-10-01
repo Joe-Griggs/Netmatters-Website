@@ -68,17 +68,14 @@
     }
 }
 
+#quote-comp {
+    color: #fff;
+    text-decoration: none;
 
-
-
-
-
-
-
-
-
-
-
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 .about blockquote {
     font-size: 1.3rem;
@@ -135,7 +132,6 @@
         }
     }
 }
-
 
 .arrow {
     display: inline-block;
