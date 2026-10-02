@@ -1,7 +1,14 @@
 .banner {
     min-height: 550px;
-    background: url("../img/building.jpeg") center / cover rgb(000 000 000 / 50%);
-    background-blend-mode: multiply;
+    background:
+    linear-gradient(
+        90deg,
+        rgb(0 0 0 / 90%) 0,
+        rgb(0 0 0 / 75%) 35em,
+        rgb(0 0 0 / 0%) 50em
+    ),
+    url("../img/building.jpeg") center / cover;
+    // background-blend-mode: multiply;
 }
 
 .banner .container {
@@ -52,4 +59,36 @@
     margin-left: 8px;
     vertical-align: middle;
     fill: currentColor;
+}
+
+
+@media (min-width: $breakpoint-xl) {
+    .banner {
+        align-items: flex-start;
+
+        .container {
+            display: flex;
+
+            align-items: start;
+            height: 500px;
+            justify-content: center;
+            padding-right: 50px;
+            padding-bottom: 25px;
+
+            h2 {
+                text-align: left;
+                font-size: 65px;
+                line-height: 1.2;
+            }
+
+            p {
+                text-align: left;
+                font-size: 25px;
+                font-weight: $font-weight-semibold;
+                padding-bottom: 10px;
+            }
+        }
+
+
+    }
 }

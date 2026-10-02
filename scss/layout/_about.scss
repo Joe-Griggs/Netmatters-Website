@@ -131,3 +131,66 @@
     vertical-align: middle;
     fill: currentColor;
 }
+
+
+@media (min-width: $breakpoint-xl) {
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 0 350px;
+
+        .container {
+            grid-column: 1 / 2;
+
+        }
+
+        .what-clients-think {
+            grid-column: 2 / 3;
+
+        }
+
+        blockquote {
+                padding-bottom: 30px;
+            }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 258px 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+
+            a {
+                display: block;
+            }
+
+            #google-rev {
+                grid-column: 1 / 2;
+            }
+
+            #trust-rev {
+                grid-column: 2 / 3;
+            }
+
+        }
+
+        .welcome-btn {
+            display: grid;
+            grid-template-columns: 258px 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+
+            #why-btn {
+                grid-column: 1 / 2;
+            }
+
+            #culture-btn {
+                grid-column: 2 / 3
+            }
+        }
+    }
+
+
+
+
+}

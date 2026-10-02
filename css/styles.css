@@ -306,10 +306,53 @@ footer .copyright p {
   fill: currentColor;
 }
 
+@media (min-width: 1260px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 0 350px;
+  }
+  .about .container {
+    grid-column: 1/2;
+  }
+  .about .what-clients-think {
+    grid-column: 2/3;
+  }
+  .about blockquote {
+    padding-bottom: 30px;
+  }
+  .about .buttons {
+    display: grid;
+    grid-template-columns: 258px 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+  .about .buttons a {
+    display: block;
+  }
+  .about .buttons #google-rev {
+    grid-column: 1/2;
+  }
+  .about .buttons #trust-rev {
+    grid-column: 2/3;
+  }
+  .about .welcome-btn {
+    display: grid;
+    grid-template-columns: 258px 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+  .about .welcome-btn #why-btn {
+    grid-column: 1/2;
+  }
+  .about .welcome-btn #culture-btn {
+    grid-column: 2/3;
+  }
+}
 .banner {
   min-height: 550px;
-  background: url("../img/building.jpeg") center/cover rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.75) 35em, rgba(0, 0, 0, 0) 50em), url("../img/building.jpeg") center/cover;
 }
 
 .banner .container {
@@ -361,6 +404,30 @@ footer .copyright p {
   fill: currentColor;
 }
 
+@media (min-width: 1260px) {
+  .banner {
+    align-items: flex-start;
+  }
+  .banner .container {
+    display: flex;
+    align-items: start;
+    height: 500px;
+    justify-content: center;
+    padding-right: 50px;
+    padding-bottom: 25px;
+  }
+  .banner .container h2 {
+    text-align: left;
+    font-size: 65px;
+    line-height: 1.2;
+  }
+  .banner .container p {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+}
 .clients {
   display: flex;
   flex-direction: row;
@@ -1362,7 +1429,7 @@ footer .copyright p {
   background-color: rgb(247, 247, 247);
   align-items: center;
   width: fit-content;
-  margin-inline: auto;
+  margin-left: inline;
   flex: 0 0 100%;
 }
 .latest-news #view-all .arrow {
@@ -1421,8 +1488,27 @@ footer .copyright p {
 @media (min-width: 1260px) {
   .latest-news {
     display: grid;
-    grid-template-columns: repeat(3 1fr);
-    grid-template-rows: 500px 500px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto minmax(0, auto) auto;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    padding: 0 350px;
+  }
+  .latest-news > h2 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .latest-news > a {
+    min-width: 0;
+    max-width: 370px;
+    grid-row: 2/3;
+  }
+  .latest-news #view-all {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: end;
+    flex: 0 0 auto;
   }
 }
 
