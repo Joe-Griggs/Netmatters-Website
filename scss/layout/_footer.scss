@@ -47,7 +47,7 @@ footer {
             }
 
             @media (min-width: $breakpoint-xl) {
-                margin-bottom: 40px;
+                margin-bottom: 40px;                    
             }
 
             h4 {
@@ -124,5 +124,56 @@ footer {
             font-weight: $font-weight-light;
             padding-left: 1rem;
         }
+
+        @media (min-width: $breakpoint-xl) {
+            p {
+                margin-left: 20%;
+                padding-left: 0;
+                white-space: nowrap;
+
+                br {
+                    display: none;
+                }
+            }
+        }
     }
+
+@media (min-width: $breakpoint-xl) {
+    display: grid;
+    grid-template-columns: 353px 400px 400px 400px 350px;
+    grid-template-rows: 1fr 45px;
+
+    .copyright {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .footer-info {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .footer-menu {
+    }
+
+    .footer-row {
+    }
+
+    .container {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        max-width: 800px;
+    }
+
 }
+
+
+}
+
+
+
+
+
+

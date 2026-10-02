@@ -220,3 +220,12 @@ $breakpoint-xl: 1260px;
         
     }
 }
+
+@mixin about-buttons {
+        padding: 16px 25px;
+        font-size: 1.2rem;
+        color: white;
+        background-color: rgba($color: #1b1b1b, $alpha: 35%);
+        border-radius: 6px;
+        border: none;
+    }

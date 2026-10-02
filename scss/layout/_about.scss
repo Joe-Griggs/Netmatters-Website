@@ -36,21 +36,11 @@
     }
 
     #why-btn {
-        padding: 16px 25px;
-        font-size: 1.2rem;
-        color: white;
-        background-color: rgba($color: #1b1b1b, $alpha: 35%);
-        border-radius: 6px;
-        border: none;
+        @include about-buttons;
     }
 
     #culture-btn {
-        padding: 16px 25px;
-        font-size: 1.2rem;
-        color: white;
-        background-color: rgba($color: #1b1b1b, $alpha: 35%);
-        border-radius: 6px;
-        border: none;
+        @include about-buttons;
     }   
 }
 
