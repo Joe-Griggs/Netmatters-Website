@@ -1575,6 +1575,9 @@ footer .copyright p {
 .header-top a svg:hover {
   border-bottom: solid 1px #323544;
 }
+.header-top #support {
+  display: none;
+}
 .header-top #nav-toggle {
   display: none;
 }
@@ -1611,6 +1614,33 @@ footer .copyright p {
   background-color: rgb(228, 228, 228);
   border: solid 2px rgb(202, 202, 202);
   font-weight: 600;
+}
+@media (min-width: 1260px) {
+  .header-top {
+    padding: 0 350px;
+  }
+  .header-top #side-nav {
+    margin-left: auto;
+  }
+  .header-top #support {
+    display: block;
+  }
+  .header-top #support a {
+    color: #323544;
+    text-decoration: none;
+  }
+  .header-top #support svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+  }
+  .header-top button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 10px 15px;
+  }
 }
 
 #header-logo {

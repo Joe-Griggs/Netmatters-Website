@@ -37,6 +37,10 @@
 
     }
 
+    #support {
+        display: none;
+    }
+
     #nav-toggle {
         display: none;
     }
@@ -78,6 +82,38 @@
             background-color: rgb(228, 228, 228);
             border: solid 2px rgb(202, 202, 202) ;
             font-weight: $font-weight-semibold;
+        }
+    }
+
+    @media (min-width: $breakpoint-xl) {
+        padding: 0 350px;
+
+        #side-nav {
+            margin-left: auto;
+        }
+
+        #support {
+            display: block;
+
+            a {
+                color: $font-sec;
+                text-decoration: none;
+            }
+
+            svg {
+                width: 28px;
+                height: 28px;
+                fill: currentColor;
+
+            }
+        }
+
+        button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 10px 15px;
         }
     }
 }
