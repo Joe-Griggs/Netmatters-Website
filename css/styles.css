@@ -1581,6 +1581,9 @@ footer .copyright p {
 .header-top #contact-2 {
   display: none;
 }
+.header-top #search-btn {
+  display: none;
+}
 .header-top #nav-toggle {
   display: none;
 }
@@ -1618,16 +1621,25 @@ footer .copyright p {
   border: solid 2px rgb(202, 202, 202);
   font-weight: 600;
 }
+.header-top #header-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.header-top #header-logo img {
+  padding-left: 10px;
+  width: 21em;
+}
 @media (min-width: 1260px) {
   .header-top {
     padding: 0 350px;
     display: grid;
-    grid-template-columns: 1fr 11.25em 11.25em 22.5em 4.375em;
+    grid-template-columns: 1fr 11.25em 11.25em 18.125em 4.375em 4.375em;
     grid-template-rows: 1fr;
   }
   .header-top #side-nav {
     margin-left: auto;
-    grid-column: 5/6;
+    grid-column: 6/7;
     grid-row: auto;
   }
   .header-top #contact {
@@ -1668,29 +1680,73 @@ footer .copyright p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1.2rem;
-    padding: 10px 15px;
+    gap: 5px;
+    padding: 13px 15px;
+  }
+  .header-top #support button {
+    background-color: #4183D7;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+  }
+  .header-top #contact-2 button {
+    background-color: #999AA2;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
   }
   .header-top .search {
     grid-column: 4/5;
     grid-row: 1/2;
     min-width: 0;
+    min-height: 85px;
     padding-bottom: 15px;
+    padding-right: 0;
+    margin-right: -4px;
+    z-index: 1;
+    background-color: white;
   }
-  .header-top {
-    margin: 0;
-    padding: 20px 350px;
+  .header-top .search #search-bar {
+    background-color: white;
+    border: solid 1px #c8c8c9;
+  }
+  .header-top .search #search-bar:focus {
+    outline: none;
+    border-color: #4183D7;
+    box-shadow: 0 0 8px rgba(0, 195, 255, 0.45);
   }
 }
-
-#header-logo {
+.header-top #search-btn {
+  display: block;
+  grid-column: 5/6;
+}
+.header-top #search-btn button {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 55px;
+  padding: 0;
+  background-color: #999AA2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-#header-logo img {
-  padding-left: 10px;
-  width: 21em;
+.header-top #search-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+.header-top {
+  margin: 0;
+  padding: 20px 350px;
+}
+.header-top #header-logo img {
+  width: 24em;
 }
 
 /*# sourceMappingURL=styles.css.map */
