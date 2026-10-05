@@ -103,6 +103,11 @@
     }
 }
 
+#support, #contact-2, #search-btn {
+    display: none;
+}
+
+
     @media (min-width: $breakpoint-xl) {
         padding: 0 350px;
         display: grid;
@@ -203,7 +208,6 @@
                 }
             }
         }
-    }
 
         #search-btn {
             display: block;
@@ -229,13 +233,61 @@
             }
         }
 
-        .header-top {}
-        margin: 0;
-        padding:20px 350px;
+        & {
+            margin: 0;
+            padding: 20px 350px;
+        }
 
         #header-logo img {
             width: 24em;
         }
     }
+}
 
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-sec;
 
+    button {
+        width: 170px;
+        height: 99px;
+        border: none;
+        background-color: $bg-sec;
+
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    #nav-con-dev {
+        @include nav-button(#67809F);
+    }
+
+    #nav-it-support {
+        @include nav-button(#4183D7);
+    }
+
+    #nav-marketing {
+        @include nav-button(#2ECC71);
+    }
+
+    #nav-telecoms {
+        @include nav-button(#D64541);
+    }
+
+    #nav-design {
+        @include nav-button(#926FB1);
+    }
+
+    #nav-cyber {
+        @include nav-button(#F62459);
+    }
+
+    #nav-developer {
+        @include nav-button(#CE4125);
+    }
+}

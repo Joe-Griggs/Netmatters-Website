@@ -1630,6 +1630,9 @@ footer .copyright p {
   padding-left: 10px;
   width: 21em;
 }
+.header-top #support, .header-top #contact-2, .header-top #search-btn {
+  display: none;
+}
 @media (min-width: 1260px) {
   .header-top {
     padding: 0 350px;
@@ -1719,34 +1722,136 @@ footer .copyright p {
     border-color: #4183D7;
     box-shadow: 0 0 8px rgba(0, 195, 255, 0.45);
   }
+  .header-top #search-btn {
+    display: block;
+    grid-column: 5/6;
+  }
+  .header-top #search-btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 55px;
+    padding: 0;
+    background-color: #999AA2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .header-top #search-btn svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+  }
+  .header-top {
+    margin: 0;
+    padding: 20px 350px;
+  }
+  .header-top #header-logo img {
+    width: 24em;
+  }
 }
-.header-top #search-btn {
-  display: block;
-  grid-column: 5/6;
-}
-.header-top #search-btn button {
+
+.main-nav {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 55px;
-  padding: 0;
-  background-color: #999AA2;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background-color: #323544;
 }
-.header-top #search-btn svg {
-  width: 28px;
-  height: 28px;
+.main-nav button {
+  width: 170px;
+  height: 99px;
+  border: none;
+  background-color: #323544;
+}
+.main-nav button svg {
+  width: 30px;
+  height: 30px;
+}
+.main-nav #nav-con-dev {
+  color: white;
+}
+.main-nav #nav-con-dev svg {
+  fill: #67809F;
+}
+.main-nav #nav-con-dev:hover {
+  background-color: #67809F;
+}
+.main-nav #nav-con-dev:hover svg {
   fill: white;
 }
-.header-top {
-  margin: 0;
-  padding: 20px 350px;
+.main-nav #nav-it-support {
+  color: white;
 }
-.header-top #header-logo img {
-  width: 24em;
+.main-nav #nav-it-support svg {
+  fill: #4183D7;
+}
+.main-nav #nav-it-support:hover {
+  background-color: #4183D7;
+}
+.main-nav #nav-it-support:hover svg {
+  fill: white;
+}
+.main-nav #nav-marketing {
+  color: white;
+}
+.main-nav #nav-marketing svg {
+  fill: #2ECC71;
+}
+.main-nav #nav-marketing:hover {
+  background-color: #2ECC71;
+}
+.main-nav #nav-marketing:hover svg {
+  fill: white;
+}
+.main-nav #nav-telecoms {
+  color: white;
+}
+.main-nav #nav-telecoms svg {
+  fill: #D64541;
+}
+.main-nav #nav-telecoms:hover {
+  background-color: #D64541;
+}
+.main-nav #nav-telecoms:hover svg {
+  fill: white;
+}
+.main-nav #nav-design {
+  color: white;
+}
+.main-nav #nav-design svg {
+  fill: #926FB1;
+}
+.main-nav #nav-design:hover {
+  background-color: #926FB1;
+}
+.main-nav #nav-design:hover svg {
+  fill: white;
+}
+.main-nav #nav-cyber {
+  color: white;
+}
+.main-nav #nav-cyber svg {
+  fill: #F62459;
+}
+.main-nav #nav-cyber:hover {
+  background-color: #F62459;
+}
+.main-nav #nav-cyber:hover svg {
+  fill: white;
+}
+.main-nav #nav-developer {
+  color: white;
+}
+.main-nav #nav-developer svg {
+  fill: #CE4125;
+}
+.main-nav #nav-developer:hover {
+  background-color: #CE4125;
+}
+.main-nav #nav-developer:hover svg {
+  fill: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

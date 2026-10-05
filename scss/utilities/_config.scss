@@ -33,6 +33,23 @@ $breakpoint-xl: 1260px;
     @return ($target / $context) * 1em;
 }
 
+// Service navigation button colors
+@mixin nav-button($color) {
+    color: white;
+
+    svg {
+        fill: $color;
+    }
+
+    &:hover {
+        background-color: $color;
+
+        svg {
+            fill: white;
+        }
+    }
+}
+
 
 //mixin for service box
 @mixin interact-box {
