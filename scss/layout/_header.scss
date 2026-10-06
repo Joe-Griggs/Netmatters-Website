@@ -251,17 +251,95 @@
     justify-content: center;
     background-color: $bg-sec;
 
+    .nav-item {
+        position: relative;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 1220px;
+        z-index: 10;
+        background: $bg-sec;
+
+        a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                background-color: inherit;
+            }
+        }
+    }
+
+    .nav-item:hover .dropdown,
+    .nav-item:focus-within .dropdown {
+        display: block;
+    }
+
+    .nav-con-dev .dropdown { background-color: #67809F; }
+    .nav-it-support .dropdown { background-color: #4183D7; }
+    .nav-marketing .dropdown { background-color: #2ECC71; }
+    .nav-telecoms .dropdown { background-color: #D64541; }
+    .nav-design .dropdown { background-color: #926FB1; }
+    .nav-cyber .dropdown { background-color: #F62459; }
+    .nav-developer .dropdown { background-color: #CE4125; }
+
+    .nav-con-dev:hover > button, .nav-con-dev:focus-within > button { background-color: #67809F; }
+    .nav-it-support:hover > button, .nav-it-support:focus-within > button { background-color: #4183D7; }
+    .nav-marketing:hover > button, .nav-marketing:focus-within > button { background-color: #2ECC71; }
+    .nav-telecoms:hover > button, .nav-telecoms:focus-within > button { background-color: #D64541; }
+    .nav-design:hover > button, .nav-design:focus-within > button { background-color: #926FB1; }
+    .nav-cyber:hover > button, .nav-cyber:focus-within > button { background-color: #F62459; }
+    .nav-developer:hover > button, .nav-developer:focus-within > button { background-color: #CE4125; }
+
+    .nav-con-dev:hover > #nav-con-dev svg, .nav-con-dev:focus-within > #nav-con-dev svg,
+    .nav-it-support:hover > #nav-it-support svg, .nav-it-support:focus-within > #nav-it-support svg,
+    .nav-marketing:hover > #nav-marketing svg, .nav-marketing:focus-within > #nav-marketing svg,
+    .nav-telecoms:hover > #nav-telecoms svg, .nav-telecoms:focus-within > #nav-telecoms svg,
+    .nav-design:hover > #nav-design svg, .nav-design:focus-within > #nav-design svg,
+    .nav-cyber:hover > #nav-cyber svg, .nav-cyber:focus-within > #nav-cyber svg,
+    .nav-developer:hover > #nav-developer svg, .nav-developer:focus-within > #nav-developer svg {
+        fill: white;
+    }
+
     button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 170px;
         height: 99px;
         border: none;
         background-color: $bg-sec;
 
         svg {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
+            margin: 10px 0;
         }
+
+        h3 {
+            margin: 0;
+            font-weight: $font-weight-medium;
+        }
+
+        #top-words {
+            font-size: 10px;
+        }
+
+        #bottom-words {
+            padding: 0 0 10px 0s;
+        }
+
     }
+
+        
 
     #nav-con-dev {
         @include nav-button(#67809F);
