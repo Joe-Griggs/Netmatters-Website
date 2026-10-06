@@ -1753,86 +1753,97 @@ footer .copyright p {
 }
 
 .main-nav {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: #323544;
 }
-.main-nav .nav-item {
-  position: relative;
-}
 .main-nav .dropdown {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 1220px;
+  right: 0;
+  padding: 30px 350px;
+  grid-template-columns: repeat(3, 1fr);
   z-index: 10;
-  background: #323544;
+}
+.main-nav .dropdown .drop-header {
+  grid-column: 1/-1;
+}
+.main-nav .dropdown .drop-header {
+  font-size: 35px;
+  font-weight: 500;
+  color: white;
+  margin: 10px 0;
 }
 .main-nav .dropdown a {
   display: block;
   padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 500;
   color: white;
   text-decoration: none;
+  margin: 0;
 }
 .main-nav .dropdown a:hover, .main-nav .dropdown a:focus {
+  text-decoration: underline;
   background-color: inherit;
 }
-.main-nav .nav-item:hover .dropdown,
-.main-nav .nav-item:focus-within .dropdown {
-  display: block;
+.main-nav .nav-item:hover .dropdown {
+  display: grid;
 }
 .main-nav .nav-con-dev .dropdown {
-  background-color: #67809F;
+  background-color: #526883;
 }
 .main-nav .nav-it-support .dropdown {
-  background-color: #4183D7;
+  background-color: #3770b9;
 }
 .main-nav .nav-marketing .dropdown {
-  background-color: #2ECC71;
+  background-color: #239e57;
 }
 .main-nav .nav-telecoms .dropdown {
-  background-color: #D64541;
+  background-color: #922f2c;
 }
 .main-nav .nav-design .dropdown {
-  background-color: #926FB1;
+  background-color: #6f5486;
 }
 .main-nav .nav-cyber .dropdown {
-  background-color: #F62459;
+  background-color: #c21b45;
 }
 .main-nav .nav-developer .dropdown {
-  background-color: #CE4125;
+  background-color: #99301b;
 }
-.main-nav .nav-con-dev:hover > button, .main-nav .nav-con-dev:focus-within > button {
+.main-nav .nav-con-dev:hover > button {
   background-color: #67809F;
 }
-.main-nav .nav-it-support:hover > button, .main-nav .nav-it-support:focus-within > button {
+.main-nav .nav-it-support:hover > button {
   background-color: #4183D7;
 }
-.main-nav .nav-marketing:hover > button, .main-nav .nav-marketing:focus-within > button {
+.main-nav .nav-marketing:hover > button {
   background-color: #2ECC71;
 }
-.main-nav .nav-telecoms:hover > button, .main-nav .nav-telecoms:focus-within > button {
+.main-nav .nav-telecoms:hover > button {
   background-color: #D64541;
 }
-.main-nav .nav-design:hover > button, .main-nav .nav-design:focus-within > button {
+.main-nav .nav-design:hover > button {
   background-color: #926FB1;
 }
-.main-nav .nav-cyber:hover > button, .main-nav .nav-cyber:focus-within > button {
+.main-nav .nav-cyber:hover > button {
   background-color: #F62459;
 }
-.main-nav .nav-developer:hover > button, .main-nav .nav-developer:focus-within > button {
+.main-nav .nav-developer:hover > button {
   background-color: #CE4125;
 }
-.main-nav .nav-con-dev:hover > #nav-con-dev svg, .main-nav .nav-con-dev:focus-within > #nav-con-dev svg,
-.main-nav .nav-it-support:hover > #nav-it-support svg, .main-nav .nav-it-support:focus-within > #nav-it-support svg,
-.main-nav .nav-marketing:hover > #nav-marketing svg, .main-nav .nav-marketing:focus-within > #nav-marketing svg,
-.main-nav .nav-telecoms:hover > #nav-telecoms svg, .main-nav .nav-telecoms:focus-within > #nav-telecoms svg,
-.main-nav .nav-design:hover > #nav-design svg, .main-nav .nav-design:focus-within > #nav-design svg,
-.main-nav .nav-cyber:hover > #nav-cyber svg, .main-nav .nav-cyber:focus-within > #nav-cyber svg,
-.main-nav .nav-developer:hover > #nav-developer svg, .main-nav .nav-developer:focus-within > #nav-developer svg {
+.main-nav .nav-con-dev:hover > #nav-con-dev svg,
+.main-nav .nav-it-support:hover > #nav-it-support svg,
+.main-nav .nav-marketing:hover > #nav-marketing svg,
+.main-nav .nav-telecoms:hover > #nav-telecoms svg,
+.main-nav .nav-design:hover > #nav-design svg,
+.main-nav .nav-cyber:hover > #nav-cyber svg,
+.main-nav .nav-developer:hover > #nav-developer svg {
   fill: white;
 }
 .main-nav button {

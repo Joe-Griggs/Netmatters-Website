@@ -245,66 +245,78 @@
 }
 
 .main-nav {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: $bg-sec;
 
-    .nav-item {
-        position: relative;
-    }
-
     .dropdown {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
-        min-width: 1220px;
+        right: 0;
+        padding: 30px 350px;
+        grid-template-columns: repeat(3, 1fr);
         z-index: 10;
-        background: $bg-sec;
+
+        .drop-header {
+            grid-column: 1 / -1;
+        }
+
+        .drop-header {
+            font-size: 35px;
+            font-weight: $font-weight-medium;
+            color: white;
+            margin: 10px 0;
+        }
 
         a {
             display: block;
             padding: 10px 15px;
+            font-size: 20px;
+            font-weight: $font-weight-medium;
             color: white;
             text-decoration: none;
+            margin: 0;
 
             &:hover,
             &:focus {
+                text-decoration: underline;
                 background-color: inherit;
             }
         }
     }
 
-    .nav-item:hover .dropdown,
-    .nav-item:focus-within .dropdown {
-        display: block;
+    .nav-item:hover .dropdown {
+        display: grid;
     }
 
-    .nav-con-dev .dropdown { background-color: #67809F; }
-    .nav-it-support .dropdown { background-color: #4183D7; }
-    .nav-marketing .dropdown { background-color: #2ECC71; }
-    .nav-telecoms .dropdown { background-color: #D64541; }
-    .nav-design .dropdown { background-color: #926FB1; }
-    .nav-cyber .dropdown { background-color: #F62459; }
-    .nav-developer .dropdown { background-color: #CE4125; }
+    .nav-con-dev .dropdown { background-color: #526883; }
+    .nav-it-support .dropdown { background-color: #3770b9; }
+    .nav-marketing .dropdown { background-color: #239e57; }
+    .nav-telecoms .dropdown { background-color: #922f2c; }
+    .nav-design .dropdown { background-color: #6f5486; }
+    .nav-cyber .dropdown { background-color: #c21b45; }
+    .nav-developer .dropdown { background-color: #99301b; }
 
-    .nav-con-dev:hover > button, .nav-con-dev:focus-within > button { background-color: #67809F; }
-    .nav-it-support:hover > button, .nav-it-support:focus-within > button { background-color: #4183D7; }
-    .nav-marketing:hover > button, .nav-marketing:focus-within > button { background-color: #2ECC71; }
-    .nav-telecoms:hover > button, .nav-telecoms:focus-within > button { background-color: #D64541; }
-    .nav-design:hover > button, .nav-design:focus-within > button { background-color: #926FB1; }
-    .nav-cyber:hover > button, .nav-cyber:focus-within > button { background-color: #F62459; }
-    .nav-developer:hover > button, .nav-developer:focus-within > button { background-color: #CE4125; }
+    .nav-con-dev:hover > button { background-color: #67809F; }
+    .nav-it-support:hover > button { background-color: #4183D7; }
+    .nav-marketing:hover > button { background-color: #2ECC71; }
+    .nav-telecoms:hover > button { background-color: #D64541; }
+    .nav-design:hover > button { background-color: #926FB1; }
+    .nav-cyber:hover > button { background-color: #F62459; }
+    .nav-developer:hover > button { background-color: #CE4125; }
 
-    .nav-con-dev:hover > #nav-con-dev svg, .nav-con-dev:focus-within > #nav-con-dev svg,
-    .nav-it-support:hover > #nav-it-support svg, .nav-it-support:focus-within > #nav-it-support svg,
-    .nav-marketing:hover > #nav-marketing svg, .nav-marketing:focus-within > #nav-marketing svg,
-    .nav-telecoms:hover > #nav-telecoms svg, .nav-telecoms:focus-within > #nav-telecoms svg,
-    .nav-design:hover > #nav-design svg, .nav-design:focus-within > #nav-design svg,
-    .nav-cyber:hover > #nav-cyber svg, .nav-cyber:focus-within > #nav-cyber svg,
-    .nav-developer:hover > #nav-developer svg, .nav-developer:focus-within > #nav-developer svg {
+    .nav-con-dev:hover > #nav-con-dev svg,
+    .nav-it-support:hover > #nav-it-support svg,
+    .nav-marketing:hover > #nav-marketing svg,
+    .nav-telecoms:hover > #nav-telecoms svg,
+    .nav-design:hover > #nav-design svg,
+    .nav-cyber:hover > #nav-cyber svg,
+    .nav-developer:hover > #nav-developer svg {
         fill: white;
     }
 
