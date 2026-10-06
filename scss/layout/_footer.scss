@@ -169,7 +169,28 @@ footer {
 
 }
 
+@media (min-width: $breakpoint-l) {
+    .footer-info {
+        margin: 0 11%;
+    }
 
+    .copyright {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 45px;
+        padding: 0 10%;
+
+        p {
+            white-space: nowrap;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+}
 }
 
 

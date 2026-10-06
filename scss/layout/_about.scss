@@ -133,12 +133,12 @@
 }
 
 
-@media (min-width: $breakpoint-xl) {
+@media (min-width: $breakpoint-l) {
     .about {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        padding: 0 350px;
+        padding: 0 10%;
 
         .container {
             grid-column: 1 / 2;
@@ -153,6 +153,11 @@
         blockquote {
                 padding-bottom: 30px;
             }
+    }
+
+@media (min-width: $breakpoint-xl) {
+    .about {
+        padding: 0 350px;
 
         .buttons {
             display: grid;
@@ -191,6 +196,6 @@
     }
 
 
-
+}
 
 }

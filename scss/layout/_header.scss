@@ -53,20 +53,20 @@
         display: none;
     }
 
-        .hamburger {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            cursor: pointer;
-            width: 60px;
-            height: 55px;
-            background-color: $bg-sec;
-            border-radius: 4px;
+    .hamburger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        cursor: pointer;
+        width: 60px;
+        height: 55px;
+        background-color: $bg-sec;
+        border-radius: 4px;
 
-            &:hover {
-                background-color: #1a1e30;
-            }
+        &:hover {
+            background-color: #1a1e30;
+        }
     }
 
     .hamburger svg {
@@ -92,31 +92,173 @@
         }
     }
 
-#header-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    #header-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
 
-    img {
-        padding-left: 10px;
-        width: 21em;
+        img {
+            padding-left: 10px;
+            width: 21em;
+        }
+    }
+
+    #support, #contact-2, #search-btn {
+        display: none;
+    }
+
+}
+
+.main-nav {
+    position: relative;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-sec;
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 30px 15px;
+        grid-template-columns: repeat(3, 1fr);
+        z-index: 10;
+
+        .drop-header {
+            grid-column: 1 / -1;
+        }
+
+        .drop-header {
+            font-size: 35px;
+            font-weight: $font-weight-medium;
+            color: white;
+            margin: 10px 0;
+        }
+
+        a {
+            display: block;
+            padding: 10px 15px;
+            font-size: 20px;
+            font-weight: $font-weight-medium;
+            color: white;
+            text-decoration: none;
+            margin: 0;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+                background-color: inherit;
+            }
+        }
+    }
+
+    .nav-item:hover .dropdown {
+        display: grid;
+    }
+
+    .nav-con-dev .dropdown { background-color: #526883; }
+    .nav-it-support .dropdown { background-color: #3770b9; }
+    .nav-marketing .dropdown { background-color: #239e57; }
+    .nav-telecoms .dropdown { background-color: #922f2c; }
+    .nav-design .dropdown { background-color: #6f5486; }
+    .nav-cyber .dropdown { background-color: #c21b45; }
+    .nav-developer .dropdown { background-color: #99301b; }
+
+    .nav-con-dev:hover > button { background-color: #67809F; }
+    .nav-it-support:hover > button { background-color: #4183D7; }
+    .nav-marketing:hover > button { background-color: #2ECC71; }
+    .nav-telecoms:hover > button { background-color: #D64541; }
+    .nav-design:hover > button { background-color: #926FB1; }
+    .nav-cyber:hover > button { background-color: #F62459; }
+    .nav-developer:hover > button { background-color: #CE4125; }
+
+    .nav-con-dev:hover > #nav-con-dev svg,
+    .nav-it-support:hover > #nav-it-support svg,
+    .nav-marketing:hover > #nav-marketing svg,
+    .nav-telecoms:hover > #nav-telecoms svg,
+    .nav-design:hover > #nav-design svg,
+    .nav-cyber:hover > #nav-cyber svg,
+    .nav-developer:hover > #nav-developer svg {
+        fill: white;
+    }
+
+    button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        height: 99px;
+        border: none;
+        background-color: $bg-sec;
+
+        svg {
+            width: 25px;
+            height: 25px;
+            margin: 10px 0;
+        }
+
+        h3 {
+            margin: 0;
+            font-weight: $font-weight-medium;
+        }
+
+        #top-words {
+            font-size: 10px;
+        }
+
+        #bottom-words {
+            padding: 0 0 10px 0;
+        }
+
+    }
+
+        
+
+    #nav-con-dev {
+        @include nav-button(#67809F);
+    }
+
+    #nav-it-support {
+        @include nav-button(#4183D7);
+    }
+
+    #nav-marketing {
+        @include nav-button(#2ECC71);
+    }
+
+    #nav-telecoms {
+        @include nav-button(#D64541);
+    }
+
+    #nav-design {
+        @include nav-button(#926FB1);
+    }
+
+    #nav-cyber {
+        @include nav-button(#F62459);
+    }
+
+    #nav-developer {
+        @include nav-button(#CE4125);
     }
 }
 
-#support, #contact-2, #search-btn {
-    display: none;
-}
 
-
-    @media (min-width: $breakpoint-xl) {
-        padding: 0 350px;
+@media (min-width: $breakpoint-l) {
+    .header-top {
+        margin: 0;
+        padding: 20px 11%;
         display: grid;
-        grid-template-columns: 1fr em(180px) em(180px) em(290px) em(70px) em(70px);
+        grid-template-columns: minmax(0, 1fr) em(180px) em(180px) em(70px) em(70px);
         grid-template-rows: 1fr;
 
         #side-nav {
             margin-left: auto;
-            grid-column: 6 / 7;
+            grid-column: 5 / 6;
             grid-row: auto;
         }
 
@@ -187,6 +329,58 @@
         }
 
         .search {
+            display: none;
+        }
+
+        #search-btn {
+            display: block;
+            grid-column: 4 / 5;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 55px;
+                padding: 0;
+                background-color: #999AA2;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            svg {
+                width: 28px;
+                height: 28px;
+                fill: white;
+            }
+        }
+
+        #header-logo img {
+            width: 24em;
+        }
+    }
+
+    .main-nav {
+        display: flex;
+        padding: 0 10%;
+    }
+
+    .main-nav .dropdown {
+        padding: 30px 10%;
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    .header-top {
+        grid-template-columns: 1fr em(180px) em(180px) em(290px) em(70px) em(70px);
+        padding: 20px 350px;
+        #side-nav {
+            grid-column: 6 / 7;
+        }
+
+        .search {
+            display: flex;
             grid-column: 4 / 5;
             grid-row: 1 / 2;
             min-width: 0;
@@ -210,174 +404,22 @@
         }
 
         #search-btn {
-            display: block;
             grid-column: 5 / 6;
-
-            button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 60px;
-                height: 55px;
-                padding: 0;
-                background-color: #999AA2;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-
-            svg {
-                width: 28px;
-                height: 28px;
-                fill: white;
-            }
         }
 
-        & {
-            margin: 0;
-            padding: 20px 350px;
-        }
+    }
 
-        #header-logo img {
-            width: 24em;
+    .main-nav {
+        padding: 0 2%;
+
+        button {
+            width: 170px;
+            flex-shrink: 0;
         }
     }
-}
 
-.main-nav {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: $bg-sec;
-
-    .dropdown {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
+    .main-nav .dropdown {
         padding: 30px 350px;
-        grid-template-columns: repeat(3, 1fr);
-        z-index: 10;
-
-        .drop-header {
-            grid-column: 1 / -1;
-        }
-
-        .drop-header {
-            font-size: 35px;
-            font-weight: $font-weight-medium;
-            color: white;
-            margin: 10px 0;
-        }
-
-        a {
-            display: block;
-            padding: 10px 15px;
-            font-size: 20px;
-            font-weight: $font-weight-medium;
-            color: white;
-            text-decoration: none;
-            margin: 0;
-
-            &:hover,
-            &:focus {
-                text-decoration: underline;
-                background-color: inherit;
-            }
-        }
-    }
-
-    .nav-item:hover .dropdown {
-        display: grid;
-    }
-
-    .nav-con-dev .dropdown { background-color: #526883; }
-    .nav-it-support .dropdown { background-color: #3770b9; }
-    .nav-marketing .dropdown { background-color: #239e57; }
-    .nav-telecoms .dropdown { background-color: #922f2c; }
-    .nav-design .dropdown { background-color: #6f5486; }
-    .nav-cyber .dropdown { background-color: #c21b45; }
-    .nav-developer .dropdown { background-color: #99301b; }
-
-    .nav-con-dev:hover > button { background-color: #67809F; }
-    .nav-it-support:hover > button { background-color: #4183D7; }
-    .nav-marketing:hover > button { background-color: #2ECC71; }
-    .nav-telecoms:hover > button { background-color: #D64541; }
-    .nav-design:hover > button { background-color: #926FB1; }
-    .nav-cyber:hover > button { background-color: #F62459; }
-    .nav-developer:hover > button { background-color: #CE4125; }
-
-    .nav-con-dev:hover > #nav-con-dev svg,
-    .nav-it-support:hover > #nav-it-support svg,
-    .nav-marketing:hover > #nav-marketing svg,
-    .nav-telecoms:hover > #nav-telecoms svg,
-    .nav-design:hover > #nav-design svg,
-    .nav-cyber:hover > #nav-cyber svg,
-    .nav-developer:hover > #nav-developer svg {
-        fill: white;
-    }
-
-    button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 170px;
-        height: 99px;
-        border: none;
-        background-color: $bg-sec;
-
-        svg {
-            width: 25px;
-            height: 25px;
-            margin: 10px 0;
-        }
-
-        h3 {
-            margin: 0;
-            font-weight: $font-weight-medium;
-        }
-
-        #top-words {
-            font-size: 10px;
-        }
-
-        #bottom-words {
-            padding: 0 0 10px 0s;
-        }
-
-    }
-
-        
-
-    #nav-con-dev {
-        @include nav-button(#67809F);
-    }
-
-    #nav-it-support {
-        @include nav-button(#4183D7);
-    }
-
-    #nav-marketing {
-        @include nav-button(#2ECC71);
-    }
-
-    #nav-telecoms {
-        @include nav-button(#D64541);
-    }
-
-    #nav-design {
-        @include nav-button(#926FB1);
-    }
-
-    #nav-cyber {
-        @include nav-button(#F62459);
-    }
-
-    #nav-developer {
-        @include nav-button(#CE4125);
     }
 }
+
