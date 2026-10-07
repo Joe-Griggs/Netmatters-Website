@@ -324,7 +324,7 @@ footer .copyright p {
   fill: currentColor;
 }
 
-@media (min-width: 515px) {
+@media (min-width: 550px) {
   .about {
     padding: 0 2%;
   }
@@ -1675,7 +1675,7 @@ footer .copyright p {
   padding-top: 0;
   margin: 0 0 0 10px;
 }
-@media (min-width: 515px) {
+@media (min-width: 550px) {
   .latest-news {
     display: grid;
     grid-template-columns: 1fr;
@@ -1898,6 +1898,49 @@ footer .copyright p {
 }
 .main-nav .nav-item:hover .dropdown {
   display: grid;
+}
+.main-nav .nav-item > button {
+  position: relative;
+}
+.main-nav .nav-item:hover > button::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 30.0935px;
+  background-color: #3498db;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  z-index: 11;
+  pointer-events: none;
+}
+.main-nav .nav-con-dev:hover > button::after,
+.main-nav .nav-con-dev:focus-within > button::after {
+  background-color: #67809F;
+}
+.main-nav .nav-it-support:hover > button::after,
+.main-nav .nav-it-support:focus-within > button::after {
+  background-color: #4183D7;
+}
+.main-nav .nav-marketing:hover > button::after,
+.main-nav .nav-marketing:focus-within > button::after {
+  background-color: #2ECC71;
+}
+.main-nav .nav-telecoms:hover > button::after,
+.main-nav .nav-telecoms:focus-within > button::after {
+  background-color: #D64541;
+}
+.main-nav .nav-design:hover > button::after,
+.main-nav .nav-design:focus-within > button::after {
+  background-color: #926FB1;
+}
+.main-nav .nav-cyber:hover > button::after,
+.main-nav .nav-cyber:focus-within > button::after {
+  background-color: #F62459;
+}
+.main-nav .nav-developer:hover > button::after,
+.main-nav .nav-developer:focus-within > button::after {
+  background-color: #CE4125;
 }
 .main-nav .nav-con-dev .dropdown {
   background-color: #526883;

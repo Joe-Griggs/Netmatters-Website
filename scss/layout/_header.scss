@@ -176,6 +176,38 @@
         display: grid;
     }
 
+    .nav-item > button {
+        position: relative;
+    }
+
+    .nav-item:hover > button::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 30.0935px;
+        background-color: #3498db;
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        z-index: 11;
+        pointer-events: none;
+    }
+
+    .nav-con-dev:hover > button::after,
+    .nav-con-dev:focus-within > button::after { background-color: #67809F; }
+    .nav-it-support:hover > button::after,
+    .nav-it-support:focus-within > button::after { background-color: #4183D7; }
+    .nav-marketing:hover > button::after,
+    .nav-marketing:focus-within > button::after { background-color: #2ECC71; }
+    .nav-telecoms:hover > button::after,
+    .nav-telecoms:focus-within > button::after { background-color: #D64541; }
+    .nav-design:hover > button::after,
+    .nav-design:focus-within > button::after { background-color: #926FB1; }
+    .nav-cyber:hover > button::after,
+    .nav-cyber:focus-within > button::after { background-color: #F62459; }
+    .nav-developer:hover > button::after,
+    .nav-developer:focus-within > button::after { background-color: #CE4125; }
+
     .nav-con-dev .dropdown { background-color: #526883; }
     .nav-it-support .dropdown { background-color: #3770b9; }
     .nav-marketing .dropdown { background-color: #239e57; }
