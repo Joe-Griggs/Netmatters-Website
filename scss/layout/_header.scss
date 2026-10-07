@@ -305,7 +305,7 @@
 @media (min-width: $breakpoint-m) {
     .header-top {
         margin: 0;
-        padding: 20px 11%;
+        padding: 20px clamp(2%, calc((100vw - 700px) / 2), 11%);
         display: grid;
         grid-template-columns: minmax(0, 1fr) 174px 70px 70px;
         grid-template-rows: 1fr;
@@ -391,7 +391,7 @@
 @media (min-width: $breakpoint-l) {
     .header-top {
         margin: 0;
-        padding: 20px 11%;
+        padding: 20px clamp(2%, calc((100vw - 884px) / 2), 11%);
         display: grid;
         grid-template-columns: minmax(0, 1fr) em(180px) em(180px) em(70px) em(70px);
         grid-template-rows: 1fr;
@@ -503,18 +503,18 @@
 
     .main-nav {
         display: flex;
-        padding: 0 10%;
+        padding: 0 clamp(0px, calc((100vw - 980px) / 2), 10%);
     }
 
     .main-nav .dropdown {
-        padding: 30px 10%;
+        padding: 30px clamp(0px, calc((100vw - 980px) / 2), 10%);
     }
 }
 
 @media (min-width: $breakpoint-xl) {
     .header-top {
         grid-template-columns: 1fr em(180px) em(180px) em(290px) em(70px) em(70px);
-        padding: 20px 350px;
+        padding: 20px clamp(2%, calc((100vw - 1220px) / 2), 350px);
         
         #side-nav {
             grid-column: 6 / 7;
@@ -561,7 +561,7 @@
     }
 
     .main-nav .dropdown {
-        padding: 30px 350px;
+        padding: 30px clamp(2%, calc((100vw - 1220px) / 2), 350px);
     }
 }
 

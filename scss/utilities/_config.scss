@@ -25,9 +25,6 @@ $breakpoint-m: 768px;
 $breakpoint-l: 992px;
 $breakpoint-xl: 1260px; 
 
-
-
-
 //px to em
 @function em($target, $context: $base__font-size) {
     @return ($target / $context) * 1em;
