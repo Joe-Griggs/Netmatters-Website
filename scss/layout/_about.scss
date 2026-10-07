@@ -132,6 +132,94 @@
     fill: currentColor;
 }
 
+@media (min-width: $breakpoint-s) {
+    .about {
+        padding: 0 2%;
+
+        .container {
+            padding: 0;
+        }
+        
+        .buttons {
+            display: grid;
+            grid-template-columns: 258px 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+            padding-left: 0;
+
+            a {
+                display: block;
+            }
+
+            #google-rev {
+                grid-column: 1 / 2;
+            }
+
+            #trust-rev {
+                grid-column: 2 / 3;
+            }
+        }
+
+        .welcome-btn {
+            display: grid;
+            grid-template-columns: 258px 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+
+            #why-btn {
+                grid-column: 1 / 2;
+            }
+
+            #culture-btn {
+                grid-column: 2 / 3;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-m) {
+    .about {
+        padding: 0 10%;
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 258px 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+            padding-left: 0;
+
+            a {
+                display: block;
+            }
+
+            #google-rev {
+                grid-column: 1 / 2;
+            }
+
+            #trust-rev {
+                grid-column: 2 / 3;
+            }
+
+        }
+
+        .welcome-btn {
+            display: grid;
+            grid-template-columns: 258px 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+
+            #why-btn {
+                grid-column: 1 / 2;
+            }
+
+            #culture-btn {
+                grid-column: 2 / 3
+            }
+        }
+    }
+
+
+}
 
 @media (min-width: $breakpoint-l) {
     .about {
@@ -151,8 +239,15 @@
         }
 
         blockquote {
-                padding-bottom: 30px;
-            }
+            padding-bottom: 30px;
+        }
+
+        .buttons,
+        .welcome-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
 @media (min-width: $breakpoint-xl) {
