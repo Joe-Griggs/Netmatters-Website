@@ -11,6 +11,7 @@
     #header-logo {
         grid-column: 1;
         grid-row: 1;
+        min-width: 0;
     }
 
     #contact {
@@ -116,7 +117,7 @@
 
         img {
             padding-left: 10px;
-            width: 21em;
+            width: min(21em, 100%);
         }
     }
 
@@ -305,7 +306,7 @@
 @media (min-width: $breakpoint-m) {
     .header-top {
         margin: 0;
-        padding: 20px clamp(2%, calc((100vw - 700px) / 2), 11%);
+        padding: 20px clamp(2%, calc((100vw - 700px) / 2), 3%);
         display: grid;
         grid-template-columns: minmax(0, 1fr) 174px 70px 70px;
         grid-template-rows: 1fr;
@@ -391,7 +392,7 @@
 @media (min-width: $breakpoint-l) {
     .header-top {
         margin: 0;
-        padding: 20px clamp(2%, calc((100vw - 884px) / 2), 11%);
+        padding: 20px clamp(2%, calc((100vw - 884px) / 2), 3%);
         display: grid;
         grid-template-columns: minmax(0, 1fr) em(180px) em(180px) em(70px) em(70px);
         grid-template-rows: 1fr;
@@ -442,6 +443,16 @@
             }
         }
 
+        #support a:hover,
+        #contact-2 a:hover {
+            text-decoration: none;
+        }
+
+        #support a svg:hover,
+        #contact-2 a svg:hover {
+            border-bottom: none;
+        }
+
         button {
             display: flex;
             flex-direction: row;
@@ -457,6 +468,10 @@
             font-weight: $font-weight-normal;
             border: none;
             border-radius: 4px;
+
+            &:hover {
+                background-color: #3970C7;
+            }
         }
 
         #contact-2 button {
@@ -466,6 +481,10 @@
             font-weight: $font-weight-normal;
             border: none;
             border-radius: 4px;
+
+            &:hover {
+                background-color: #85868D;
+            }
         }
 
         .search {
@@ -564,4 +583,5 @@
         padding: 30px clamp(2%, calc((100vw - 1220px) / 2), 350px);
     }
 }
+
 

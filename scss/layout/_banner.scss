@@ -15,7 +15,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 6em;
+    justify-content: center;
+    min-height: 550px;
+    padding: 50px 20px;
 }
 
 .banner .container h2 {
@@ -69,11 +71,9 @@
         .container {
             display: flex;
 
-            align-items: start;
-            height: 500px;
+            align-items: flex-start;
             justify-content: center;
-            padding-right: 50px;
-            padding-bottom: 25px;
+            padding: 15px;
 
             h2 {
                 text-align: left;
@@ -92,3 +92,4 @@
 
     }
 }
+

@@ -89,13 +89,11 @@ footer #nmlogo {
   align-items: flex-start;
 }
 footer #nmlogo img {
-  padding-left: 10px;
-  width: 21em;
+  width: min(16em, 100%);
 }
 footer .social-btn {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
   gap: 0.6rem;
   padding: 0 0 15px 15px;
 }
@@ -103,7 +101,7 @@ footer .social-btn a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 68px;
+  width: 120px;
   height: 54px;
   background-color: #22222e;
   color: #fff;
@@ -173,14 +171,26 @@ footer .copyright p {
 }
 @media (min-width: 768px) {
   footer .footer-info {
-    margin: 0 11%;
+    margin: 0 3%;
+  }
+  footer .socials h4 {
+    padding-left: 0;
+  }
+  footer .social-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+  footer .social-btn a {
+    width: 60px;
   }
   footer .copyright {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 45px;
-    padding: 0 10%;
+    padding: 0 1%;
   }
   footer .copyright p {
     white-space: nowrap;
@@ -193,18 +203,21 @@ footer .copyright p {
 .about {
   background-color: #323544;
   color: #fff;
+  padding-inline: 15px;
 }
 
 .about h2 {
   font-size: 2.3rem;
   font-weight: 600;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .about .container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .about .container p {
@@ -288,7 +301,7 @@ footer .copyright p {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.2rem;
-  padding-left: 1.5rem;
+  padding-left: 0;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -328,6 +341,9 @@ footer .copyright p {
   .about {
     padding: 0 2%;
   }
+  .about h2 {
+    white-space: nowrap;
+  }
   .about .container {
     padding: 0;
   }
@@ -362,7 +378,7 @@ footer .copyright p {
 }
 @media (min-width: 768px) {
   .about {
-    padding: 0 10%;
+    padding: 0 3%;
   }
   .about .buttons {
     display: grid;
@@ -398,13 +414,15 @@ footer .copyright p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 0 10%;
+    padding: 0 3%;
   }
   .about .container {
     grid-column: 1/2;
+    padding: 15px;
   }
   .about .what-clients-think {
     grid-column: 2/3;
+    padding: 15px;
   }
   .about blockquote {
     padding-bottom: 30px;
@@ -457,7 +475,9 @@ footer .copyright p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 6em;
+  justify-content: center;
+  min-height: 550px;
+  padding: 50px 20px;
 }
 
 .banner .container h2 {
@@ -508,11 +528,9 @@ footer .copyright p {
   }
   .banner .container {
     display: flex;
-    align-items: start;
-    height: 500px;
+    align-items: flex-start;
     justify-content: center;
-    padding-right: 50px;
-    padding-bottom: 25px;
+    padding: 15px;
   }
   .banner .container h2 {
     text-align: left;
@@ -581,7 +599,7 @@ footer .copyright p {
   font-size: 2.8rem;
   font-weight: 400;
   color: #323544;
-  white-space: nowrap;
+  white-space: normal;
   margin-bottom: 0em;
 }
 .services .read-more {
@@ -1414,7 +1432,7 @@ footer .copyright p {
 @media (min-width: 768px) {
   .services {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 35px 12%;
+    padding: 35px 3%;
   }
   .services > h2 {
     grid-column: 1/2;
@@ -1435,10 +1453,15 @@ footer .copyright p {
     grid-column: span 2;
   }
 }
+@media (min-width: 550px) {
+  .services h2 {
+    white-space: nowrap;
+  }
+}
 @media (min-width: 992px) {
   .services {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    padding: 35px 12%;
+    padding: 35px 3%;
   }
   .services > h2 {
     grid-column: 1/4;
@@ -1523,7 +1546,7 @@ footer .copyright p {
   font-size: 2.3rem;
   font-weight: 600;
   color: #323544;
-  white-space: nowrap;
+  white-space: normal;
 }
 .latest-news .read-more {
   display: flex;
@@ -1684,6 +1707,7 @@ footer .copyright p {
   .latest-news h2 {
     grid-column: 1/2;
     grid-row: 1/2;
+    white-space: nowrap;
   }
   .latest-news #view-all {
     align-self: center;
@@ -1697,7 +1721,7 @@ footer .copyright p {
     grid-template-rows: auto minmax(0, auto) auto;
     column-gap: 1rem;
     row-gap: 1rem;
-    padding: 0 10%;
+    padding: 0 3%;
   }
   .latest-news > h2 {
     grid-column: 1/2;
@@ -1763,6 +1787,7 @@ footer .copyright p {
 .header-top #header-logo {
   grid-column: 1;
   grid-row: 1;
+  min-width: 0;
 }
 .header-top #contact {
   grid-column: 2;
@@ -1850,7 +1875,7 @@ footer .copyright p {
 }
 .header-top #header-logo img {
   padding-left: 10px;
-  width: 21em;
+  width: min(21em, 100%);
 }
 .header-top #support, .header-top #contact-2, .header-top #search-btn {
   display: none;
@@ -2106,7 +2131,7 @@ footer .copyright p {
 @media (min-width: 768px) {
   .header-top {
     margin: 0;
-    padding: 20px clamp(2%, (100vw - 700px) / 2, 11%);
+    padding: 20px clamp(2%, (100vw - 700px) / 2, 3%);
     display: grid;
     grid-template-columns: minmax(0, 1fr) 174px 70px 70px;
     grid-template-rows: 1fr;
@@ -2179,7 +2204,7 @@ footer .copyright p {
 @media (min-width: 992px) {
   .header-top {
     margin: 0;
-    padding: 20px clamp(2%, (100vw - 884px) / 2, 11%);
+    padding: 20px clamp(2%, (100vw - 884px) / 2, 3%);
     display: grid;
     grid-template-columns: minmax(0, 1fr) 11.25em 11.25em 4.375em 4.375em;
     grid-template-rows: 1fr;
@@ -2223,6 +2248,14 @@ footer .copyright p {
     color: #323544;
     text-decoration: none;
   }
+  .header-top #support a:hover,
+  .header-top #contact-2 a:hover {
+    text-decoration: none;
+  }
+  .header-top #support a svg:hover,
+  .header-top #contact-2 a svg:hover {
+    border-bottom: none;
+  }
   .header-top button {
     display: flex;
     flex-direction: row;
@@ -2238,6 +2271,9 @@ footer .copyright p {
     border: none;
     border-radius: 4px;
   }
+  .header-top #support button:hover {
+    background-color: #3970C7;
+  }
   .header-top #contact-2 button {
     background-color: #999AA2;
     color: white;
@@ -2245,6 +2281,9 @@ footer .copyright p {
     font-weight: 400;
     border: none;
     border-radius: 4px;
+  }
+  .header-top #contact-2 button:hover {
+    background-color: #85868D;
   }
   .header-top .search {
     display: none;

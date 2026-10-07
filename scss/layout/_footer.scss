@@ -64,15 +64,13 @@ footer {
         align-items: flex-start;
 
         img {
-            padding-left: 10px;
-            width: 21em;
+            width: min(16em, 100%);
         }
     }
 
     .social-btn{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: repeat(2, 120px);
         gap: 0.6rem;
         padding: 0 0 15px 15px;
 
@@ -80,7 +78,7 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 68px;
+            width: 120px;
             height: 54px;
             background-color: #22222e;
             color: #fff;
@@ -171,7 +169,22 @@ footer {
 
 @media (min-width: $breakpoint-m) {
     .footer-info {
-        margin: 0 11%;
+        margin: 0 3%;
+    }
+
+    .socials h4 {
+        padding-left: 0;
+    }
+
+    .social-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-left: 0;
+
+        a {
+            width: 60px;
+        }
     }
 
     .copyright {
@@ -179,7 +192,7 @@ footer {
         flex-direction: row;
         align-items: center;
         height: 45px;
-        padding: 0 10%;
+        padding: 0 1%;
 
         p {
             white-space: nowrap;
@@ -192,6 +205,7 @@ footer {
 
 }
 }
+
 
 
 
