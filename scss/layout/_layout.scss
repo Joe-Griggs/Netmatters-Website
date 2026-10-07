@@ -3,6 +3,13 @@ body {
     font-family: $font-family-sans-serif;
 }
 
+button,
+input,
+select,
+textarea {
+    font-family: $font-family-sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }

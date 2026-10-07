@@ -3,6 +3,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -716,7 +723,7 @@ footer .copyright p {
   fill: #67809F;
 }
 .services #con-dev:hover {
-  top: -10px;
+  transform: translateY(-10px);
   transition: 0.5s ease;
   background-color: #67809F;
   color: white;
@@ -829,7 +836,7 @@ footer .copyright p {
   fill: #67809F;
 }
 .services #it-support:hover {
-  top: -10px;
+  transform: translateY(-10px);
   transition: 0.5s ease;
   background-color: #4183D7;
   color: white;
@@ -942,7 +949,7 @@ footer .copyright p {
   fill: #67809F;
 }
 .services #marketing:hover {
-  top: -10px;
+  transform: translateY(-10px);
   transition: 0.5s ease;
   background-color: #2ECC71;
   color: white;
@@ -1055,7 +1062,7 @@ footer .copyright p {
   fill: #67809F;
 }
 .services #telecoms:hover {
-  top: -10px;
+  transform: translateY(-10px);
   transition: 0.5s ease;
   background-color: #D64541;
   color: white;
@@ -1168,7 +1175,7 @@ footer .copyright p {
   fill: #67809F;
 }
 .services #design:hover {
-  top: -10px;
+  transform: translateY(-10px);
   transition: 0.5s ease;
   background-color: #926FB1;
   color: white;
@@ -1281,7 +1288,7 @@ footer .copyright p {
   fill: #67809F;
 }
 .services #cyber:hover {
-  top: -10px;
+  transform: translateY(-10px);
   transition: 0.5s ease;
   background-color: #F62459;
   color: white;
@@ -1394,7 +1401,7 @@ footer .copyright p {
   fill: #67809F;
 }
 .services #developer:hover {
-  top: -10px;
+  transform: translateY(-10px);
   transition: 0.5s ease;
   background-color: #CE4125;
   color: white;
@@ -1592,7 +1599,7 @@ footer .copyright p {
   margin: 10px 1.8rem 28px 1.8rem;
 }
 .latest-news .news:hover {
-  top: -10px;
+  transform: translateY(-10px);
   transition: 0.5s ease;
 }
 .latest-news .career {
@@ -1631,7 +1638,7 @@ footer .copyright p {
   margin: 10px 1.8rem 28px 1.8rem;
 }
 .latest-news .career:hover {
-  top: -10px;
+  transform: translateY(-10px);
   transition: 0.5s ease;
 }
 .latest-news #view-all {
@@ -1921,6 +1928,19 @@ footer .copyright p {
   text-decoration: underline;
   background-color: inherit;
 }
+.main-nav .dropdown-item {
+  display: flex;
+  align-items: center;
+}
+.main-nav .dropdown-item svg {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.main-nav .dropdown-item a {
+  flex: 1;
+}
 .main-nav .nav-item:hover .dropdown {
   display: grid;
 }
@@ -2036,12 +2056,14 @@ footer .copyright p {
 .main-nav button h3 {
   margin: 0;
   font-weight: 500;
+  line-height: 1;
 }
 .main-nav button #top-words {
-  font-size: 10px;
+  font-size: 11px;
 }
 .main-nav button #bottom-words {
-  padding: 0 0 10px 0;
+  font-size: 18px;
+  padding-bottom: 10px;
 }
 .main-nav #nav-con-dev {
   color: white;
