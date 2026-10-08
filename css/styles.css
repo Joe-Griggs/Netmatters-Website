@@ -1425,7 +1425,7 @@ footer .copyright p {
   width: 24px;
   height: 24px;
   margin-left: 8px;
-  vertical-align: top;
+  vertical-align: center;
   fill: currentColor;
 }
 .services #view-work a {
