@@ -1865,7 +1865,7 @@ footer .copyright p {
   display: flex;
   grid-column: 1/-1;
   grid-row: 2;
-  padding: 0.9375em 0 0.25em 10px;
+  padding: 0.9375em 0 0.25em 0;
 }
 .header-top .search #search-bar {
   display: block;
