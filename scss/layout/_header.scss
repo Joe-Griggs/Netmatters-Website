@@ -106,9 +106,25 @@
             padding: 13px;
             background-color: rgb(228, 228, 228);
             border: solid 2px rgb(202, 202, 202) ;
+            border-right: none;
             font-weight: $font-weight-semibold;
+            z-index: 1;
+        }
+
+        button {
+            display: absolute;
+            z-index: 3;
+            background-color: rgb(228, 228, 228);
+            border: solid 2px rgb(202, 202, 202) ;
+            border-left: none;
+
+            svg {
+                height: 30px;
+                width: 30px;
+            }
         }
     }
+
 
     #header-logo {
         display: flex;
@@ -119,10 +135,6 @@
             padding-left: 10px;
             width: min(21em, 100%);
         }
-    }
-
-    #support, #contact-2, #search-btn {
-        display: none;
     }
 
 }
@@ -315,11 +327,6 @@
     }
 }
 
-// @media (min-width: $breakpoint-s) {
-//     .header-top {
-
-//     }
-// }
 
 @media (min-width: $breakpoint-m) {
     .header-top {
@@ -370,6 +377,10 @@
                     border-color: #4183D7;
                     box-shadow: 0 0 8px rgba(0, 195, 255, 0.45);
                 }
+            }
+
+            button {
+                display: none;
             }
         }
 

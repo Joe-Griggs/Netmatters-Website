@@ -1422,8 +1422,8 @@ footer .copyright p {
 }
 .services #view-work .arrow {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   margin-left: 8px;
   vertical-align: center;
   fill: currentColor;
@@ -1656,8 +1656,9 @@ footer .copyright p {
   display: inline-block;
   width: 24px;
   height: 24px;
-  margin-left: 8px;
-  vertical-align: top;
+  margin: 0;
+  padding-bottom: 5px;
+  vertical-align: center;
   fill: currentColor;
 }
 .latest-news #view-all a {
@@ -1873,7 +1874,20 @@ footer .copyright p {
   padding: 13px;
   background-color: rgb(228, 228, 228);
   border: solid 2px rgb(202, 202, 202);
+  border-right: none;
   font-weight: 600;
+  z-index: 1;
+}
+.header-top .search button {
+  display: absolute;
+  z-index: 3;
+  background-color: rgb(228, 228, 228);
+  border: solid 2px rgb(202, 202, 202);
+  border-left: none;
+}
+.header-top .search button svg {
+  height: 30px;
+  width: 30px;
 }
 .header-top #header-logo {
   display: flex;
@@ -1883,9 +1897,6 @@ footer .copyright p {
 .header-top #header-logo img {
   padding-left: 10px;
   width: min(21em, 100%);
-}
-.header-top #support, .header-top #contact-2, .header-top #search-btn {
-  display: none;
 }
 
 .main-nav {
@@ -2194,6 +2205,9 @@ footer .copyright p {
     outline: none;
     border-color: #4183D7;
     box-shadow: 0 0 8px rgba(0, 195, 255, 0.45);
+  }
+  .header-top .search button {
+    display: none;
   }
   .header-top #search-btn {
     display: block;
