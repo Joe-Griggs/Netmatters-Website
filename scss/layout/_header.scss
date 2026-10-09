@@ -399,6 +399,10 @@
                 border: none;
                 border-radius: 4px;
                 cursor: pointer;
+
+                &:hover {
+                    background-color: #77787e;
+                }
             }
 
             svg {
@@ -562,7 +566,7 @@
 @media (min-width: $breakpoint-xl) {
     .header-top {
         grid-template-columns: 1fr em(180px) em(180px) em(290px) em(70px) em(70px);
-        padding: 20px clamp(2%, calc((100vw - 1220px) / 2), 350px);
+        padding: 20px clamp(2%, calc((100vw - 1220px) / 2), 18%);
         
         #side-nav {
             grid-column: 6 / 7;
@@ -609,7 +613,7 @@
     }
 
     .main-nav .dropdown {
-        padding: 30px clamp(2%, calc((100vw - 1220px) / 2), 350px);
+        padding: 30px clamp(2%, calc((100vw - 1220px) / 2), 18%);
     }
 }
 

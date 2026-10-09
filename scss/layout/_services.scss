@@ -304,7 +304,7 @@
 
     @media (min-width: $breakpoint-xl) {
         grid-template-columns: repeat(12, minmax(0, 1fr));
-        padding: 45px 360px;
+        padding: 45px 18%;
 
         > h2 {
             grid-column: 1;
