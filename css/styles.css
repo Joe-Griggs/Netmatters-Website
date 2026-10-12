@@ -1881,6 +1881,9 @@ footer .copyright p {
   font-weight: 600;
   z-index: 1;
 }
+.header-top .search #search-bar:focus {
+  outline: none;
+}
 .header-top .search button {
   display: absolute;
   z-index: 3;

@@ -109,6 +109,10 @@
             border-right: none;
             font-weight: $font-weight-semibold;
             z-index: 1;
+
+            &:focus {
+                outline: none;
+            }
         }
 
         button {
