@@ -474,8 +474,92 @@ footer .copyright p {
   }
 }
 .banner {
+  --banner-image: url("../img/building.jpeg");
   min-height: 550px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.75) 35em, rgba(0, 0, 0, 0) 50em), url("../img/building.jpeg") center/cover;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.75) 35em, rgba(0, 0, 0, 0) 50em), var(--banner-image) center/cover;
+}
+
+.banner--grey {
+  --banner-image: url("../img/NMgrey.jpeg");
+}
+.banner--grey.banner .container button {
+  background-color: #F7B322;
+}
+.banner--grey.banner .container button:hover {
+  background-color: #d49b1f;
+}
+
+.banner--blue {
+  --banner-image: url("../img/NMblue.jpeg");
+}
+.banner--blue.banner .container button {
+  background-color: #4183D7;
+}
+.banner--blue.banner .container button:hover {
+  background-color: #3770b9;
+}
+
+.banner--green {
+  --banner-image: url("../img/NMgreen.jpeg");
+}
+.banner--green.banner .container button {
+  background-color: #2ECC71;
+}
+.banner--green.banner .container button:hover {
+  background-color: #239e57;
+}
+
+.banner--red {
+  --banner-image: url("../img/NMred.jpeg");
+}
+.banner--red.banner .container button {
+  background-color: #D64541;
+}
+.banner--red.banner .container button:hover {
+  background-color: #922f2c;
+}
+
+.banner--purple {
+  --banner-image: url("../img/NMpurple.jpeg");
+}
+.banner--purple.banner .container button {
+  background-color: #926FB1;
+}
+.banner--purple.banner .container button:hover {
+  background-color: #6f5486;
+}
+
+.banner--pink {
+  --banner-image: url("../img/NMpink.jpeg");
+}
+.banner--pink.banner .container button {
+  background-color: #F62459;
+}
+.banner--pink.banner .container button:hover {
+  background-color: #c21b45;
+}
+
+#hero .splide__arrow--prev,
+#hero .splide__arrow--next {
+  display: none;
+}
+
+#hero .splide__pagination {
+  bottom: 3em;
+  gap: 1em;
+}
+
+#hero .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+}
+
+#hero .splide__pagination__page.is-active {
+  transform: scale(1);
+  background-color: #fff;
+  opacity: 1;
+  outline: 2px solid #fff;
+  outline-offset: 4px;
 }
 
 .banner .container {

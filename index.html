@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/splide.min.css">
         <link rel="stylesheet" href="css/styles.css">
         <title>Netmatters Homepage</title>
     </head>
@@ -134,13 +135,59 @@
             </div>
         </div>
         <main>
-            <section id="hero">
-                <div class="banner">
-                    <div class="container">
-                        <h2>The East Of England's Leading Technology Company</h2> <!--carousel-->
-                        <p>Performance-driven digital and technology services with complete transparency.</p>
-                        <a href="#"><button>WHY CHOOSE US?<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></button></a>
-                    </div>
+            <section id="hero" class="splide" aria-label="Featured banners">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="banner banner--main splide__slide">
+                            <div class="container">
+                                <h2>The East Of England's Leading Technology Company</h2>
+                                <p>Performance-driven digital and technology services with complete transparency.</p>
+                                <a href="#"><button>WHY CHOOSE US?<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></button></a>
+                            </div>
+                        </li>
+                        <li class="banner banner--grey splide__slide">
+                            <div class="container">
+                                <h2>Bespoke Software</h2>
+                                <p>Delivering expert bespoke software solutions across a range of industries.</p>
+                                <a href="#"><button>FIND OUT MORE<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></button></a>
+                            </div>
+                        </li>
+                        <li class="banner banner--blue splide__slide">
+                            <div class="container">
+                                <h2>IT Support</h2>
+                                <p>Fast and cost-effective IT support services for your business.</p>
+                                <a href="#"><button>FIND OUT MORE<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></button></a>
+                            </div>
+                        </li>
+                        <li class="banner banner--green splide__slide">
+                            <div class="container">
+                                <h2>The East Of England's Leading Technology Company</h2>
+                                <p>Performance-driven digital and technology services with complete transparency.</p>
+                                <a href="#"><button>WHY CHOOSE US?<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></button></a>
+                            </div>
+                        </li>
+                        <li class="banner banner--red splide__slide">
+                            <div class="container">
+                                <h2>The East Of England's Leading Technology Company</h2>
+                                <p>Performance-driven digital and technology services with complete transparency.</p>
+                                <a href="#"><button>WHY CHOOSE US?<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></button></a>
+                            </div>
+                        </li>
+                        <li class="banner banner--purple splide__slide">
+                            <div class="container">
+                                <h2>The East Of England's Leading Technology Company</h2>
+                                <p>Performance-driven digital and technology services with complete transparency.</p>
+                                <a href="#"><button>WHY CHOOSE US?<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></button></a>
+                            </div>
+                        </li>
+                        <li class="banner banner--pink splide__slide">
+                            <div class="container">
+                                <h2>The East Of England's Leading Technology Company</h2>
+                                <p>Performance-driven digital and technology services with complete transparency.</p>
+                                <a href="#"><button>WHY CHOOSE US?<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></button></a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -422,5 +469,7 @@
                 Sitemap</p>
             </div>
         </footer>
+        <script src="js/splide.min.js"></script>
+        <script src="js/bannerSlider.js"></script>
     </body>
 </html>
