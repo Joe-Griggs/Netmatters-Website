@@ -1,3 +1,4 @@
+//keeps the main banner image as the default and adds a dark fade behind the text
 .banner {
     --banner-image: url("../img/building.jpeg");
     min-height: 550px;
@@ -11,6 +12,7 @@
     var(--banner-image) center / cover;
 }
 
+//changes the image and button colours for each banner
 .banner--grey {
     --banner-image: url("../img/NMgrey.jpeg");
 
@@ -83,16 +85,19 @@
     }
 }
 
+//hides the arrows so the page dots show which banner is active
 #hero .splide__arrow--prev,
 #hero .splide__arrow--next {
     display: none;
 }
 
+//moves the page dots up and spaces them out
 #hero .splide__pagination {
     bottom: 3em;
     gap: 1em;
 }
 
+//sets the size and look of the current page dot
 #hero .splide__pagination__page {
     width: 10px;
     height: 10px;
