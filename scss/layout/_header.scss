@@ -331,6 +331,81 @@
     }
 }
 
+//sets the side nav off screen until the hamburger opens it
+.side-nav {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    width: min(350px, 90vw);
+    height: 100vh;
+    overflow-y: auto;
+    background: #262833;
+    box-shadow: -12px 0 28px rgb(0 0 0 / 20%);
+    transform: translateX(105%);
+    transition: transform 220ms ease;
+
+    //slides the side nav into view
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    .side-nav__group {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        //styles the section headings
+        h3 {
+            display: flex;
+            align-items: center;
+            height: 58px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0 20px;
+            border-bottom: 1px solid #262833;
+            background: #343746;
+            color: white;
+            font-size: 1rem;
+            font-weight: $font-weight-semibold;
+            text-transform: uppercase;
+        }
+
+        //keeps each link the same size and line up the text
+        a {
+            display: flex;
+            align-items: center;
+            height: 52px;
+            box-sizing: border-box;
+            padding: 0 20px;
+            border-bottom: 1px solid #1d1f29;
+            background: #262833;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: $font-weight-medium;
+            text-decoration: none;
+            text-transform: uppercase;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            //adds the chevron before each link
+            &::before {
+                content: "»";
+                flex: 0 0 26px;
+                color: white;
+                font-size: 1.1rem;
+            }
+
+            //change the link colour when hovered or selected by keyboard
+            &:hover,
+            &:focus-visible {
+                background: #323544;
+            }
+        }
+    }
+}
+
 
 @media (min-width: $breakpoint-m) {
     .header-top {

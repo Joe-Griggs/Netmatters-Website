@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -2254,6 +2255,68 @@ footer .copyright p {
 }
 .main-nav #nav-developer:hover svg {
   fill: white;
+}
+
+.side-nav {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  width: min(350px, 90vw);
+  height: 100vh;
+  overflow-y: auto;
+  background: #262833;
+  box-shadow: -12px 0 28px rgba(0, 0, 0, 0.2);
+  transform: translateX(105%);
+  transition: transform 220ms ease;
+}
+.side-nav.is-open {
+  transform: translateX(0);
+}
+.side-nav .side-nav__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.side-nav .side-nav__group h3 {
+  display: flex;
+  align-items: center;
+  height: 58px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 20px;
+  border-bottom: 1px solid #262833;
+  background: #343746;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.side-nav .side-nav__group a {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  border-bottom: 1px solid #1d1f29;
+  background: #262833;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.side-nav .side-nav__group a::before {
+  content: "»";
+  flex: 0 0 26px;
+  color: white;
+  font-size: 1.1rem;
+}
+.side-nav .side-nav__group a:hover, .side-nav .side-nav__group a:focus-visible {
+  background: #323544;
 }
 
 @media (min-width: 768px) {
