@@ -1,36 +1,23 @@
-// Controls the mobile/tablet off-canvas navigation.
-const toggle = document.querySelector('#nav-toggle');
+// Hamburger pop out
+
+const button = document.querySelector('#nav-toggle');
 const nav = document.querySelector('.side-nav');
-const closeButton = document.querySelector('#close-nav');
+const close = document.querySelector('#close-nav');
 
-if (toggle && nav && closeButton) {
-    const setOpen = (open) => {
-        toggle.checked = open;
-        nav.classList.toggle('is-open', open);
-        nav.setAttribute('aria-hidden', String(!open));
-        document.body.classList.toggle('nav-open', open);
-    };
+button.addEventListener('change', function() {
+    nav.classList.toggle('is-open', button.checked);
+});
 
-    toggle.addEventListener('change', () => setOpen(toggle.checked));
-    closeButton.addEventListener('click', () => setOpen(false));
+close.addEventListener('click', function() {
+    button.checked = false;
+    nav.classList.remove('is-open');
+});
 
-    document.addEventListener('click', (event) => {
-        if (nav.classList.contains('is-open') &&
-            !nav.contains(event.target) &&
-            !toggle.contains(event.target) &&
-            !event.target.closest('label[for="nav-toggle"]')) {
-            setOpen(false);
-        }
-    });
 
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && nav.classList.contains('is-open')) {
-            setOpen(false);
-            toggle.focus();
-        }
-    });
-
-    nav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => setOpen(false));
-    });
-}
+//Close when clicked off side nav
+document.addEventListener('click', function(event) {//listens to see if the click was on the side nav
+    if (!nav.contains(event.target) && !button.contains(event.target)) {//making sure it wasnt the nav or the button
+        button.checked = false;
+        nav.classList.remove('is-open');
+    }
+});
