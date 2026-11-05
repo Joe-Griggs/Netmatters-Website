@@ -479,6 +479,10 @@ footer .copyright p {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.75) 35em, rgba(0, 0, 0, 0) 50em), var(--banner-image) center/cover;
 }
 
+.banner--main .container p {
+  padding-right: 15%;
+}
+
 .banner--grey {
   --banner-image: url("../img/NMgrey.jpeg");
 }
@@ -586,6 +590,7 @@ footer .copyright p {
   color: white;
   width: 75%;
   text-align: center;
+  padding-right: 30%;
 }
 
 .banner .container button {

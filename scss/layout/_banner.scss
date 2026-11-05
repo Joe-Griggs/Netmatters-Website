@@ -13,6 +13,12 @@
 }
 
 //changes the image and button colours for each banner
+.banner--main {
+    .container p {
+        padding-right: 15%;
+    }
+}
+
 .banner--grey {
     --banner-image: url("../img/NMgrey.jpeg");
 
@@ -136,6 +142,8 @@
     color: white;
     width: 75%;
     text-align: center;
+
+    padding-right: 30%;
 }
 
 .banner .container button {
