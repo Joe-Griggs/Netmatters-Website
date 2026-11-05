@@ -1884,6 +1884,8 @@ footer .copyright p {
   grid-template-rows: auto auto;
   padding: 2%;
   margin-top: 25px;
+  z-index: 10;
+  position: relative;
 }
 .header-top #header-logo {
   grid-column: 1;
@@ -2257,21 +2259,36 @@ footer .copyright p {
   fill: white;
 }
 
+body {
+  --side-nav-width: min(330px, 90vw);
+  overflow-x: hidden;
+  isolation: isolate;
+}
+body > :not(.side-nav) {
+  position: relative;
+  z-index: 1;
+  transition: transform 500ms ease;
+}
+body:has(> .side-nav.is-open) > :not(.side-nav) {
+  transform: translateX(calc(-1 * var(--side-nav-width)));
+}
+
 .side-nav {
   position: fixed;
-  z-index: 20;
+  z-index: 0;
   top: 0;
   right: 0;
-  width: min(350px, 90vw);
+  width: var(--side-nav-width);
   height: 100vh;
   overflow-y: auto;
   background: #262833;
   box-shadow: -12px 0 28px rgba(0, 0, 0, 0.2);
-  transform: translateX(105%);
-  transition: transform 220ms ease;
+  visibility: hidden;
+  transition: visibility 0s linear 500ms;
 }
 .side-nav.is-open {
-  transform: translateX(0);
+  visibility: visible;
+  transition-delay: 0s;
 }
 .side-nav .side-nav__group {
   display: flex;
