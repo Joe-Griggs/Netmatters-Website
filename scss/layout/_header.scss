@@ -345,11 +345,12 @@ body {
     > :not(.side-nav) {
         position: relative;
         z-index: 1;
-        transition: transform 500ms ease;
+        transition: transform 500ms ease, filter 500ms ease;
     }
 
     &:has(> .side-nav.is-open) > :not(.side-nav) {
         transform: translateX(calc(-1 * var(--side-nav-width)));
+        filter: brightness(0.6);
     }
 }
 

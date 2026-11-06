@@ -2268,10 +2268,11 @@ body {
 body > :not(.side-nav) {
   position: relative;
   z-index: 1;
-  transition: transform 500ms ease;
+  transition: transform 500ms ease, filter 500ms ease;
 }
 body:has(> .side-nav.is-open) > :not(.side-nav) {
   transform: translateX(calc(-1 * var(--side-nav-width)));
+  filter: brightness(0.6);
 }
 
 .side-nav {
@@ -2577,6 +2578,104 @@ body:has(> .side-nav.is-open) > :not(.side-nav) {
   }
   .main-nav .dropdown {
     padding: 30px clamp(2%, (100vw - 1220px) / 2, 18%);
+  }
+}
+body > .cookie-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.cookie-box {
+  width: min(600px, 100%);
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: #666;
+  font-family: "Poppins", sans-serif;
+}
+
+.cookie-header {
+  padding: 14px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.cookie-header h2 {
+  margin: 0;
+  color: #3b3b48;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.cookie-body {
+  min-height: 215px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.cookie-body p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.cookie-body a {
+  color: #3b3b48;
+  text-decoration: none;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 30px;
+  padding: 19px 20px 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.cookie-button {
+  flex: 1;
+  min-height: 47px;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  font: inherit;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.settings-button {
+  background-color: #999aa2;
+}
+.settings-button:hover {
+  background-color: #77787e;
+}
+
+.accept-button {
+  background-color: #926fb1;
+}
+.accept-button:hover {
+  background-color: #7a5c94;
+}
+
+@media (max-width: 550px) {
+  .cookie-header h2 {
+    font-size: 22px;
+  }
+  .cookie-body {
+    min-height: 0;
+    padding: 18px 20px;
+  }
+  .cookie-body p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .cookie-buttons {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
