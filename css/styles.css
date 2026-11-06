@@ -1886,6 +1886,7 @@ footer .copyright p {
   margin-top: 25px;
   z-index: 10;
   position: relative;
+  background-color: white;
 }
 .header-top #header-logo {
   grid-column: 1;
