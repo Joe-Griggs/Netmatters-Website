@@ -13,12 +13,6 @@
 }
 
 //changes the image and button colours for each banner
-.banner--main {
-    .container p {
-        padding-right: 15%;//padding on the right so the first banners p tag content breaks and sits correctly
-    }
-}
-
 .banner--grey {
     --banner-image: url("../img/NMgrey.jpeg");
 
@@ -99,7 +93,7 @@
 
 //moves the page dots up and spaces them out
 #hero .splide__pagination {
-    bottom: 3em;
+    bottom: 2em;
     gap: 1em;
 }
 
@@ -129,6 +123,7 @@
 
 .banner .container h2 {
     font-size: 40px;
+    line-height: 1.1;
     font-weight: $font-weight-semibold;
     color: white;
     text-align: center;
@@ -140,10 +135,9 @@
     font-size: 20px;
     font-weight: $font-weight-medium;
     color: white;
-    width: 75%;
+    width: 100%;
     text-align: center;
-
-    padding-right: 30%;
+    padding: 0;
 }
 
 .banner .container button {
@@ -196,7 +190,9 @@
             }
 
             p {
+                width: 75%;
                 text-align: left;
+                padding-right: 30%;
                 font-size: 25px;
                 font-weight: $font-weight-semibold;
                 padding-bottom: 10px;
@@ -204,6 +200,11 @@
         }
 
 
+    }
+
+    //removes the extra right padding from the main banner text
+    .banner--main .container p {
+        padding-right: 15%;
     }
 }
 

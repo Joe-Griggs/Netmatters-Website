@@ -480,10 +480,6 @@ footer .copyright p {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.75) 35em, rgba(0, 0, 0, 0) 50em), var(--banner-image) center/cover;
 }
 
-.banner--main .container p {
-  padding-right: 15%;
-}
-
 .banner--grey {
   --banner-image: url("../img/NMgrey.jpeg");
 }
@@ -550,7 +546,7 @@ footer .copyright p {
 }
 
 #hero .splide__pagination {
-  bottom: 3em;
+  bottom: 2em;
   gap: 1em;
 }
 
@@ -578,6 +574,7 @@ footer .copyright p {
 
 .banner .container h2 {
   font-size: 40px;
+  line-height: 1.1;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -589,9 +586,9 @@ footer .copyright p {
   font-size: 20px;
   font-weight: 500;
   color: white;
-  width: 75%;
+  width: 100%;
   text-align: center;
-  padding-right: 30%;
+  padding: 0;
 }
 
 .banner .container button {
@@ -638,10 +635,15 @@ footer .copyright p {
     line-height: 1.2;
   }
   .banner .container p {
+    width: 75%;
     text-align: left;
+    padding-right: 30%;
     font-size: 25px;
     font-weight: 600;
     padding-bottom: 10px;
+  }
+  .banner--main .container p {
+    padding-right: 15%;
   }
 }
 .clients {
