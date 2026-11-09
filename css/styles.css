@@ -2511,6 +2511,8 @@ body:has(> .side-nav.is-open) > :not(.side-nav) {
     margin-left: auto;
     grid-column: 4/5;
     grid-row: auto;
+    display: flex;
+    align-items: center;
   }
   .header-top #contact {
     display: none;
