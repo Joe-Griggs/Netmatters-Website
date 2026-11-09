@@ -2294,12 +2294,12 @@ body:has(> .side-nav.is-open) > :not(.side-nav) {
   visibility: visible;
   transition-delay: 0s;
 }
-.side-nav .side-nav__group {
+.side-nav .side-nav-group {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
-.side-nav .side-nav__group h3 {
+.side-nav .side-nav-group h3 {
   display: flex;
   align-items: center;
   height: 58px;
@@ -2313,7 +2313,7 @@ body:has(> .side-nav.is-open) > :not(.side-nav) {
   font-weight: 600;
   text-transform: uppercase;
 }
-.side-nav .side-nav__group a {
+.side-nav .side-nav-group a {
   display: flex;
   align-items: center;
   height: 52px;
@@ -2330,16 +2330,144 @@ body:has(> .side-nav.is-open) > :not(.side-nav) {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.side-nav .side-nav__group a::before {
+.side-nav .side-nav-group a::before {
   content: "»";
   flex: 0 0 26px;
   color: white;
   font-size: 1.1rem;
 }
-.side-nav .side-nav__group a:hover, .side-nav .side-nav__group a:focus-visible {
+.side-nav .side-nav-group a:hover, .side-nav .side-nav-group a:focus-visible {
   background: #323544;
 }
 
+@media (max-width: 991px) {
+  body {
+    --side-nav-width: min(280px, 48vw);
+  }
+  .side-nav {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .side-nav .side-nav-mobile-services {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 22px 20px;
+    background: #343746;
+  }
+  .side-nav .side-nav-contact {
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 6px;
+    outline: 1px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    border-radius: 3px;
+    background: #343746;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+  }
+  .side-nav .side-nav-services {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .side-nav .side-nav-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .side-nav .side-nav-card-heading {
+    display: flex;
+    min-height: 78px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 27px 18px;
+    outline: 1px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    border-radius: 3px;
+    background: #343746;
+  }
+  .side-nav .side-nav-card-heading svg {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 7px;
+    fill: var(--side-nav-icon-color);
+  }
+  .side-nav .side-nav-card-heading h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .side-nav .side-nav-card-heading .side-nav-title-small {
+    font-size: 0.675rem;
+  }
+  .side-nav .side-nav-card-heading .side-nav-title-large {
+    font-size: 1.05rem;
+  }
+  .side-nav .side-nav-consultancy {
+    --side-nav-icon-color: #67809F;
+  }
+  .side-nav .side-nav-it-support {
+    --side-nav-icon-color: #4183D7;
+  }
+  .side-nav .side-nav-marketing {
+    --side-nav-icon-color: #2ECC71;
+  }
+  .side-nav .side-nav-telecoms {
+    --side-nav-icon-color: #D64541;
+  }
+  .side-nav .side-nav-web-design {
+    --side-nav-icon-color: #926FB1;
+  }
+  .side-nav .side-nav-cyber {
+    --side-nav-icon-color: #F62459;
+  }
+  .side-nav .side-nav-developer {
+    --side-nav-icon-color: #CE4125;
+  }
+  .side-nav .side-nav-card-links {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 0;
+    background: #262833;
+  }
+  .side-nav .side-nav-card-links a {
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 0.975rem;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .side-nav .side-nav-card-links a:hover, .side-nav .side-nav-card-links a:focus-visible {
+    background: #323544;
+  }
+  .side-nav > .side-nav-group:first-of-type {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .side-nav .side-nav-mobile-services {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .header-top {
     margin: 0;
