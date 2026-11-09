@@ -282,20 +282,28 @@
                     </details>
                 </div>
                 <form class="contact-form">
-                    <label for="contact-name">Your Name</label>
-                    <input id="contact-name" name="name" type="text" required>
-
-                    <label for="contact-company">Company Name</label>
-                    <input id="contact-company" name="company" type="text">
-
-                    <label for="contact-email">Your Email</label>
-                    <input id="contact-email" name="email" type="email" required>
-
-                    <label for="contact-phone">Your Telephone Number</label>
-                    <input id="contact-phone" name="phone" type="tel" required>
-
-                    <label for="contact-message">Message</label>
-                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+                    <div class="contact-fields">
+                        <div class="contact-field">
+                            <label for="contact-name">Your Name <span class="required-star">*</span></label>
+                            <input id="contact-name" name="name" type="text" required>
+                        </div>
+                        <div class="contact-field">
+                            <label for="contact-company">Company Name</label>
+                            <input id="contact-company" name="company" type="text">
+                        </div>
+                        <div class="contact-field">
+                            <label for="contact-email">Your Email <span class="required-star">*</span></label>
+                            <input id="contact-email" name="email" type="email" required>
+                        </div>
+                        <div class="contact-field">
+                            <label for="contact-phone">Your Telephone Number <span class="required-star">*</span></label>
+                            <input id="contact-phone" name="phone" type="tel" required>
+                        </div>
+                        <div class="contact-field contact-message-field">
+                            <label for="contact-message">Message <span class="required-star">*</span></label>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        </div>
+                    </div>
 
                     <div class="contact-consent">
                         <input id="contact-consent" name="consent" type="checkbox">
@@ -303,6 +311,7 @@
                     </div>
                     <div class="contact-submit">
                         <button type="submit">Send Enquiry</button>
+                        <span class="required-message" hidden><span class="required-star">*</span> Fields Required</span>
                     </div>
                 </form>
             </section>
@@ -404,6 +413,7 @@
         </footer>
         <script src="js/side-nav.js"></script>
         <script src="js/header.js"></script>
+        <script src="js/form.js"></script>
     </body>
 </html>
 
