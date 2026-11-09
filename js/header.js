@@ -5,7 +5,7 @@ const header = document.querySelector('.header');
 if (header) {
     header.style.position = 'sticky';
     header.style.top = '0';
-    header.style.zIndex = '20';
+    header.style.zIndex = '2';
     header.style.transition = 'transform 500ms ease, translate 0.3s ease';
 
     let previousScrollY = window.scrollY;

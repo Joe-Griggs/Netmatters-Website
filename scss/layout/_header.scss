@@ -342,6 +342,10 @@ body {
     overflow-x: hidden;
     isolation: isolate;
 
+    > main {
+        background: white;
+    }
+
     > :not(.side-nav) {
         position: relative;
         z-index: 1;
@@ -427,6 +431,10 @@ body {
             }
         }
     }
+}
+
+.header {
+    background: white;
 }
 
 
