@@ -31,7 +31,7 @@ if (header) {
 
             header.getBoundingClientRect();
             requestAnimationFrame(function() {
-                header.style.transition = 'translate 0.3s ease';
+            header.style.transition = 'translate 0.3s ease, transform 500ms ease, filter 500ms ease';
                 header.style.translate = '0 0';
             });
         }

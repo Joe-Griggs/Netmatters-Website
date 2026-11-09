@@ -76,6 +76,7 @@
     }
 
     .hamburger {
+        position: relative;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -83,6 +84,7 @@
         cursor: pointer;
         width: 60px;
         height: 55px;
+        color: white;
         background-color: $bg-sec;
         border-radius: 4px;
 
@@ -92,10 +94,37 @@
     }
 
     .hamburger svg {
-        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
         width: 40px;
         height: 32px;
-        fill: white;
+        transition: opacity 200ms ease, transform 200ms ease;
+
+        path {
+            fill: none;
+            stroke: white;
+        }
+    }
+
+    .hamburger .menu-icon {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(0) scale(1);
+    }
+
+    .hamburger .close-icon {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(-90deg) scale(.8);
+    }
+
+    #nav-toggle:checked + .hamburger .menu-icon {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(90deg) scale(.8);
+    }
+
+    #nav-toggle:checked + .hamburger .close-icon {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(0) scale(1);
     }
 
     .search{

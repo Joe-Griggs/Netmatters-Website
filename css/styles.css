@@ -1940,6 +1940,7 @@ footer .copyright p {
   display: none;
 }
 .header-top .hamburger {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1947,6 +1948,7 @@ footer .copyright p {
   cursor: pointer;
   width: 60px;
   height: 55px;
+  color: white;
   background-color: #323544;
   border-radius: 4px;
 }
@@ -1954,10 +1956,32 @@ footer .copyright p {
   background-color: #1a1e30;
 }
 .header-top .hamburger svg {
-  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 40px;
   height: 32px;
-  fill: white;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.header-top .hamburger svg path {
+  fill: none;
+  stroke: white;
+}
+.header-top .hamburger .menu-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0) scale(1);
+}
+.header-top .hamburger .close-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.8);
+}
+.header-top #nav-toggle:checked + .hamburger .menu-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.8);
+}
+.header-top #nav-toggle:checked + .hamburger .close-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0) scale(1);
 }
 .header-top .search {
   display: flex;
