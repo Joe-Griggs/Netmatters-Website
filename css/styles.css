@@ -158,7 +158,7 @@ footer .copyright p {
 @media (min-width: 1260px) {
   footer {
     display: grid;
-    grid-template-columns: 353px 400px 400px 400px 350px;
+    grid-template-columns: minmax(0, 353fr) minmax(0, 400fr) minmax(0, 400fr) minmax(0, 400fr) minmax(0, 350fr);
     grid-template-rows: 1fr 45px;
   }
   footer .copyright {
@@ -174,7 +174,14 @@ footer .copyright p {
   footer .container {
     grid-column-start: 3;
     grid-column-end: 5;
+    width: 100%;
+    min-width: 0;
     max-width: 800px;
+  }
+}
+@media (min-width: 1903px) {
+  footer {
+    grid-template-columns: 353px 400px 400px 400px 350px;
   }
 }
 @media (min-width: 768px) {

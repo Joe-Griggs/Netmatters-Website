@@ -138,7 +138,7 @@ footer {
 
 @media (min-width: $breakpoint-xl) {
     display: grid;
-    grid-template-columns: 353px 400px 400px 400px 350px;
+    grid-template-columns: minmax(0, 353fr) minmax(0, 400fr) minmax(0, 400fr) minmax(0, 400fr) minmax(0, 350fr);
     grid-template-rows: 1fr 45px;
 
     .copyright {
@@ -162,9 +162,15 @@ footer {
     .container {
         grid-column-start: 3;
         grid-column-end: 5;
+        width: 100%;
+        min-width: 0;
         max-width: 800px;
     }
 
+}
+
+@media (min-width: 1903px) {
+    grid-template-columns: 353px 400px 400px 400px 350px;
 }
 
 @media (min-width: $breakpoint-m) {
