@@ -99,7 +99,7 @@
         left: 50%;
         width: 40px;
         height: 32px;
-        transition: opacity 200ms ease, transform 200ms ease;
+        transition: opacity 600ms ease, transform 600ms ease;
 
         path {
             fill: none;
@@ -179,6 +179,7 @@
 
 .main-nav {
     position: relative;
+    z-index: 20;
     display: none;
     flex-direction: row;
     align-items: center;
@@ -425,6 +426,20 @@ body {
             font-size: 1rem;
             font-weight: $font-weight-semibold;
             text-transform: uppercase;
+
+            .side-nav-heading-link {
+                all: unset;
+                cursor: pointer;
+
+                &::before {
+                    content: none;
+                }
+
+                &:hover,
+                &:focus-visible {
+                    background: transparent;
+                }
+            }
         }
 
         //keeps each link the same size and line up the text
@@ -462,7 +477,9 @@ body {
     }
 }
 
-.header {
+body > .header {
+    position: relative;
+    z-index: 2;
     background: white;
 }
 
@@ -887,5 +904,7 @@ body {
         padding: 30px clamp(2%, calc((100vw - 1220px) / 2), 18%);
     }
 }
+
+
 
 

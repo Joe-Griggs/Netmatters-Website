@@ -1961,7 +1961,7 @@ footer .copyright p {
   left: 50%;
   width: 40px;
   height: 32px;
-  transition: opacity 200ms ease, transform 200ms ease;
+  transition: opacity 600ms ease, transform 600ms ease;
 }
 .header-top .hamburger svg path {
   fill: none;
@@ -2026,6 +2026,7 @@ footer .copyright p {
 
 .main-nav {
   position: relative;
+  z-index: 20;
   display: none;
   flex-direction: row;
   align-items: center;
@@ -2340,6 +2341,16 @@ body:has(> .side-nav.is-open) > :not(.side-nav) {
   font-weight: 600;
   text-transform: uppercase;
 }
+.side-nav .side-nav-group h3 .side-nav-heading-link {
+  all: unset;
+  cursor: pointer;
+}
+.side-nav .side-nav-group h3 .side-nav-heading-link::before {
+  content: none;
+}
+.side-nav .side-nav-group h3 .side-nav-heading-link:hover, .side-nav .side-nav-group h3 .side-nav-heading-link:focus-visible {
+  background: transparent;
+}
 .side-nav .side-nav-group a {
   display: flex;
   align-items: center;
@@ -2367,7 +2378,9 @@ body:has(> .side-nav.is-open) > :not(.side-nav) {
   background: #323544;
 }
 
-.header {
+body > .header {
+  position: relative;
+  z-index: 2;
   background: white;
 }
 
