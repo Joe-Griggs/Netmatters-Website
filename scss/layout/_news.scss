@@ -75,6 +75,8 @@
     }
 
     #view-all {
+        display: inline-flex;
+        text-decoration: none;
         font-size: 1.5rem;
         font-weight: $font-weight-semibold;
         color: $font-sec;
@@ -95,15 +97,7 @@
             fill: currentColor;
         }
 
-        & a {
-            text-decoration: none;
-            color: $font-sec;
-            padding-bottom: 5px;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        } 
+        &:hover { text-decoration: underline; }
     }
 
     .posts{
@@ -114,7 +108,7 @@
         border-top: solid 1px rgb(212, 212, 212);
         margin: 0 35px 10px;
 
-        #avatar {
+        .avatar {
             grid-column-start: 1;
             grid-column-end: 2;
             grid-row-start: 1;
@@ -124,7 +118,7 @@
             object-fit: cover;
         }
 
-        #posted{
+        .posted {
             grid-column-start: 2;
             grid-column-end: 4;
             grid-row-start: 1;
@@ -137,7 +131,7 @@
             margin: 0 0 0 10px;
         }
 
-        #date {
+        .date {
             grid-column-start: 2;
             grid-column-end: 4;
             grid-row-start: 2;

@@ -255,20 +255,26 @@ footer .copyright p {
   background-color: #1b1b1b;
 }
 .welcome-btn #why-btn {
+  display: inline-flex;
+  align-items: center;
   padding: 16px 25px;
   font-size: 1.2rem;
   color: white;
   background-color: rgba(27, 27, 27, 0.35);
   border-radius: 6px;
   border: none;
+  text-decoration: none;
 }
 .welcome-btn #culture-btn {
+  display: inline-flex;
+  align-items: center;
   padding: 16px 25px;
   font-size: 1.2rem;
   color: white;
   background-color: rgba(27, 27, 27, 0.35);
   border-radius: 6px;
   border: none;
+  text-decoration: none;
 }
 
 .stars {
@@ -321,23 +327,29 @@ footer .copyright p {
   padding-bottom: 3rem;
 }
 .buttons #google-rev {
+  display: inline-flex;
+  align-items: center;
   padding: 16px 25px;
   font-size: 1.2rem;
   color: white;
   background-color: #4387f6;
   border-radius: 6px;
   border: none;
+  text-decoration: none;
 }
 .buttons #google-rev:hover {
   background-color: #3970c7;
 }
 .buttons #trust-rev {
+  display: inline-flex;
+  align-items: center;
   padding: 16px 25px;
   font-size: 1.2rem;
   color: white;
   background-color: #00b67b;
   border-radius: 6px;
   border: none;
+  text-decoration: none;
 }
 .buttons #trust-rev:hover {
   background-color: #019264;
@@ -490,60 +502,60 @@ footer .copyright p {
 .banner--grey {
   --banner-image: url("../img/NMgrey.jpeg");
 }
-.banner--grey.banner .container button {
+.banner--grey.banner .container button, .banner--grey.banner .container .banner-cta {
   background-color: #F7B322;
 }
-.banner--grey.banner .container button:hover {
+.banner--grey.banner .container button:hover, .banner--grey.banner .container .banner-cta:hover {
   background-color: #d49b1f;
 }
 
 .banner--blue {
   --banner-image: url("../img/NMblue.jpeg");
 }
-.banner--blue.banner .container button {
+.banner--blue.banner .container button, .banner--blue.banner .container .banner-cta {
   background-color: #4183D7;
 }
-.banner--blue.banner .container button:hover {
+.banner--blue.banner .container button:hover, .banner--blue.banner .container .banner-cta:hover {
   background-color: #3770b9;
 }
 
 .banner--green {
   --banner-image: url("../img/NMgreen.jpeg");
 }
-.banner--green.banner .container button {
+.banner--green.banner .container button, .banner--green.banner .container .banner-cta {
   background-color: #2ECC71;
 }
-.banner--green.banner .container button:hover {
+.banner--green.banner .container button:hover, .banner--green.banner .container .banner-cta:hover {
   background-color: #239e57;
 }
 
 .banner--red {
   --banner-image: url("../img/NMred.jpeg");
 }
-.banner--red.banner .container button {
+.banner--red.banner .container button, .banner--red.banner .container .banner-cta {
   background-color: #D64541;
 }
-.banner--red.banner .container button:hover {
+.banner--red.banner .container button:hover, .banner--red.banner .container .banner-cta:hover {
   background-color: #922f2c;
 }
 
 .banner--purple {
   --banner-image: url("../img/NMpurple.jpeg");
 }
-.banner--purple.banner .container button {
+.banner--purple.banner .container button, .banner--purple.banner .container .banner-cta {
   background-color: #926FB1;
 }
-.banner--purple.banner .container button:hover {
+.banner--purple.banner .container button:hover, .banner--purple.banner .container .banner-cta:hover {
   background-color: #6f5486;
 }
 
 .banner--pink {
   --banner-image: url("../img/NMpink.jpeg");
 }
-.banner--pink.banner .container button {
+.banner--pink.banner .container button, .banner--pink.banner .container .banner-cta {
   background-color: #F62459;
 }
-.banner--pink.banner .container button:hover {
+.banner--pink.banner .container button:hover, .banner--pink.banner .container .banner-cta:hover {
   background-color: #c21b45;
 }
 
@@ -579,6 +591,7 @@ footer .copyright p {
   padding: 50px 20px;
 }
 
+.banner .container h1,
 .banner .container h2 {
   font-size: 40px;
   line-height: 1.1;
@@ -598,22 +611,27 @@ footer .copyright p {
   padding: 0;
 }
 
-.banner .container button {
+.banner .container button,
+.banner .container .banner-cta {
+  display: inline-block;
   padding: 18px 25px;
   font-size: large;
   color: white;
   background-color: #926fb1;
   border-radius: 4px;
   border: none;
+  text-decoration: none;
 }
-.banner .container button .arrow {
+.banner .container button .arrow,
+.banner .container .banner-cta .arrow {
   width: 22px;
   height: 22px;
   margin-left: 10px;
   fill: currentColor;
   vertical-align: middle;
 }
-.banner .container button:hover {
+.banner .container button:hover,
+.banner .container .banner-cta:hover {
   background-color: #7a5c94;
 }
 
@@ -636,6 +654,7 @@ footer .copyright p {
     justify-content: center;
     padding: 15px;
   }
+  .banner .container h1,
   .banner .container h2 {
     text-align: left;
     font-size: 65px;
@@ -1513,6 +1532,8 @@ footer .copyright p {
   color: #CE4125;
 }
 .services #view-work {
+  display: inline-flex;
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: 600;
   color: #323544;
@@ -1530,12 +1551,7 @@ footer .copyright p {
   vertical-align: center;
   fill: currentColor;
 }
-.services #view-work a {
-  text-decoration: none;
-  color: #323544;
-  padding-bottom: 5px;
-}
-.services #view-work a:hover {
+.services #view-work:hover {
   text-decoration: underline;
 }
 @media (min-width: 768px) {
@@ -1744,6 +1760,8 @@ footer .copyright p {
   transition: 0.5s ease;
 }
 .latest-news #view-all {
+  display: inline-flex;
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: 600;
   color: #323544;
@@ -1763,12 +1781,7 @@ footer .copyright p {
   vertical-align: center;
   fill: currentColor;
 }
-.latest-news #view-all a {
-  text-decoration: none;
-  color: #323544;
-  padding-bottom: 5px;
-}
-.latest-news #view-all a:hover {
+.latest-news #view-all:hover {
   text-decoration: underline;
 }
 .latest-news .posts {
@@ -1779,7 +1792,7 @@ footer .copyright p {
   border-top: solid 1px rgb(212, 212, 212);
   margin: 0 35px 10px;
 }
-.latest-news .posts #avatar {
+.latest-news .posts .avatar {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -1788,7 +1801,7 @@ footer .copyright p {
   height: auto;
   object-fit: cover;
 }
-.latest-news .posts #posted {
+.latest-news .posts .posted {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -1800,7 +1813,7 @@ footer .copyright p {
   padding-top: 30px;
   margin: 0 0 0 10px;
 }
-.latest-news .posts #date {
+.latest-news .posts .date {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 2;
@@ -2197,15 +2210,16 @@ footer .copyright p {
   height: 25px;
   margin: 10px 0;
 }
-.main-nav button h3 {
+.main-nav button .top-words,
+.main-nav button .bottom-words {
   margin: 0;
   font-weight: 500;
   line-height: 1;
 }
-.main-nav button #top-words {
+.main-nav button .top-words {
   font-size: 11px;
 }
-.main-nav button #bottom-words {
+.main-nav button .bottom-words {
   font-size: 18px;
   padding-bottom: 10px;
 }
@@ -2623,11 +2637,21 @@ body > .header {
     grid-row: auto;
   }
   .header-top #support a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     width: auto;
-    height: auto;
-    padding: 0;
-    color: #323544;
+    height: 55px;
+    padding: 13px 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: #4183D7;
     text-decoration: none;
+  }
+  .header-top #support a:hover {
+    background-color: #3970C7;
   }
   .header-top #support svg {
     width: 28px;
@@ -2641,11 +2665,21 @@ body > .header {
     grid-row: auto;
   }
   .header-top #contact-2 a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     width: auto;
-    height: auto;
-    padding: 0;
-    color: #323544;
+    height: 55px;
+    padding: 13px 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: #999AA2;
     text-decoration: none;
+  }
+  .header-top #contact-2 a:hover {
+    background-color: #85868D;
   }
   .header-top #support a:hover,
   .header-top #contact-2 a:hover {
@@ -2662,27 +2696,11 @@ body > .header {
     gap: 5px;
     padding: 13px 15px;
   }
-  .header-top #support button {
-    background-color: #4183D7;
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
-    border: none;
-    border-radius: 4px;
-  }
-  .header-top #support button:hover {
-    background-color: #3970C7;
-  }
-  .header-top #contact-2 button {
-    background-color: #999AA2;
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
-    border: none;
-    border-radius: 4px;
-  }
-  .header-top #contact-2 button:hover {
-    background-color: #85868D;
+  .header-top #support svg,
+  .header-top #contact-2 svg {
+    fill: currentColor;
+    width: 28px;
+    height: 28px;
   }
   .header-top .search {
     display: none;

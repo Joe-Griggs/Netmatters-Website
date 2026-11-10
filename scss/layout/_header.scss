@@ -318,17 +318,18 @@
             margin: 10px 0;
         }
 
-        h3 {
+        .top-words,
+        .bottom-words {
             margin: 0;
             font-weight: $font-weight-medium;
             line-height: 1;
         }
 
-        #top-words {
+        .top-words {
             font-size: 11px;
         }
 
-        #bottom-words {
+        .bottom-words {
             font-size: 18px;
             padding-bottom: 10px;
         }
@@ -735,11 +736,20 @@ body > .header {
             grid-row: auto;
 
             a {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
                 width: auto;
-                height: auto;
-                padding: 0;
-                color: $font-sec;
+                height: 55px;
+                padding: 13px 15px;
+                color: white;
+                font-size: 18px;
+                font-weight: $font-weight-normal;
+                border-radius: 4px;
+                background-color: #4183D7;
                 text-decoration: none;
+
+                &:hover { background-color: #3970C7; }
             }
 
             svg {
@@ -756,11 +766,20 @@ body > .header {
             grid-row: auto;
 
             a {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
                 width: auto;
-                height: auto;
-                padding: 0;
-                color: $font-sec;
+                height: 55px;
+                padding: 13px 15px;
+                color: white;
+                font-size: 18px;
+                font-weight: $font-weight-normal;
+                border-radius: 4px;
+                background-color: #999AA2;
                 text-decoration: none;
+
+                &:hover { background-color: #85868D; }
             }
         }
 
@@ -782,31 +801,8 @@ body > .header {
             padding: 13px 15px;
         }
 
-        #support button {
-            background-color: #4183D7;
-            color: white;
-            font-size: 18px;
-            font-weight: $font-weight-normal;
-            border: none;
-            border-radius: 4px;
-
-            &:hover {
-                background-color: #3970C7;
-            }
-        }
-
-        #contact-2 button {
-            background-color: #999AA2;
-            color: white;
-            font-size: 18px;
-            font-weight: $font-weight-normal;
-            border: none;
-            border-radius: 4px;
-
-            &:hover {
-                background-color: #85868D;
-            }
-        }
+        #support svg,
+        #contact-2 svg { fill: currentColor; width: 28px; height: 28px; }
 
         .search {
             display: none;
