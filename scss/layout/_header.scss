@@ -5,8 +5,8 @@
     align-items: center;
     grid-template-columns: minmax(0, 1fr) auto auto;
     grid-template-rows: auto auto;
-    padding: 2%;
-    margin-top: 25px;
+    padding: calc(2% + 25px) 2% 2%;
+    margin-top: 0;
 
     z-index: 10;
     position: relative;
@@ -163,6 +163,12 @@
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+
+        a {
+            width: 100%;
+            height: auto;
+            padding: 0;
+        }
 
         img {
             padding-left: 10px;
@@ -418,13 +424,22 @@ body {
             padding: 0 20px;
             border-bottom: 1px solid #262833;
             background: #343746;
+            transition: background-color 0.2s ease;
             color: white;
             font-size: 1rem;
-            font-weight: $font-weight-semibold;
+            font-weight: $font-weight-normal;
             text-transform: uppercase;
+
+            &:hover {
+                background: #3d404f;
+            }
 
             .side-nav-heading-link {
                 all: unset;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
                 cursor: pointer;
 
                 &::before {
@@ -449,7 +464,7 @@ body {
             background: #262833;
             color: white;
             font-size: 0.875rem;
-            font-weight: $font-weight-medium;
+            font-weight: $font-weight-normal;
             text-decoration: none;
             text-transform: uppercase;
             white-space: nowrap;
@@ -482,7 +497,7 @@ body > .header {
 
 @media (max-width: ($breakpoint-l - 1px)) {
     body {
-        --side-nav-width: min(280px, 48vw);
+        --side-nav-width: min(280px, 80vw);
     }
 
     .side-nav {
@@ -537,6 +552,11 @@ body > .header {
             border: 1px solid hsla(0, 0%, 100%, .1);
             border-radius: 3px;
             background: #343746;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background: #3d404f;
+            }
 
             svg {
                 width: 26px;
@@ -895,7 +915,3 @@ body > .header {
         padding: 30px clamp(2%, calc((100vw - 1220px) / 2), 18%);
     }
 }
-
-
-
-

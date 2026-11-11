@@ -2028,8 +2028,8 @@ footer .copyright p {
   align-items: center;
   grid-template-columns: minmax(0, 1fr) auto auto;
   grid-template-rows: auto auto;
-  padding: 2%;
-  margin-top: 25px;
+  padding: calc(2% + 25px) 2% 2%;
+  margin-top: 0;
   z-index: 10;
   position: relative;
   background-color: white;
@@ -2157,6 +2157,11 @@ footer .copyright p {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+.header-top #header-logo a {
+  width: 100%;
+  height: auto;
+  padding: 0;
 }
 .header-top #header-logo img {
   padding-left: 10px;
@@ -2476,13 +2481,21 @@ body:has(> .side-nav.is-open) > :not(.side-nav) {
   padding: 0 20px;
   border-bottom: 1px solid #262833;
   background: #343746;
+  transition: background-color 0.2s ease;
   color: white;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
+}
+.side-nav .side-nav-group h3:hover {
+  background: #3d404f;
 }
 .side-nav .side-nav-group h3 .side-nav-heading-link {
   all: unset;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
   cursor: pointer;
 }
 .side-nav .side-nav-group h3 .side-nav-heading-link::before {
@@ -2501,7 +2514,7 @@ body:has(> .side-nav.is-open) > :not(.side-nav) {
   background: #262833;
   color: white;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
@@ -2526,7 +2539,7 @@ body > .header {
 
 @media (max-width: 991px) {
   body {
-    --side-nav-width: min(280px, 48vw);
+    --side-nav-width: min(280px, 80vw);
   }
   .side-nav {
     box-sizing: border-box;
@@ -2576,6 +2589,10 @@ body > .header {
     border: 1px solid hsla(0, 0%, 100%, 0.1);
     border-radius: 3px;
     background: #343746;
+    transition: background-color 0.2s ease;
+  }
+  .side-nav .side-nav-card-heading:hover {
+    background: #3d404f;
   }
   .side-nav .side-nav-card-heading svg {
     width: 26px;
