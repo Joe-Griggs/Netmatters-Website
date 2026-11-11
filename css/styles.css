@@ -688,9 +688,10 @@ footer .copyright p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   padding: 4rem 2rem;
-  gap: 4em;
+  gap: 6em;
   background-color: rgb(247, 247, 247);
 }
 .clients img {
@@ -704,10 +705,88 @@ footer .copyright p {
   padding: 0;
   margin: 0;
 }
-.clients img:hover {
-  filter: grayscale(0);
+.clients .client {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  color: white;
+  text-decoration: none;
+}
+.clients .client img {
+  filter: grayscale(1);
+}
+.clients .client .client-info {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 30px);
+  left: 50%;
+  width: 280px;
+  padding: 20px;
+  transform: translateX(-50%);
+  background-color: #323544;
+  text-align: center;
+  z-index: 1;
+}
+.clients .client .client-info::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: 20px solid transparent;
+  border-top-color: #323544;
+  transform: translateX(-50%);
+}
+.clients .client h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+.clients .client p {
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+.clients .client .client-info > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.clients .client .case-study--orange {
+  background-color: #F7B322;
+}
+.clients .client .case-study--blue {
+  background-color: #4183D7;
+}
+.clients .client .case-study--green {
+  background-color: #2ECC71;
+}
+.clients .client .case-study--purple {
+  background-color: #926FB1;
+}
+.clients .client .case-study-arrow {
+  font-size: 22px;
+  line-height: 1;
 }
 
+@media (max-width: 991px) {
+  .clients .client.is-open img {
+    filter: grayscale(0);
+  }
+  .clients .client.is-open .client-info {
+    display: block;
+  }
+}
+@media (min-width: 992px) and (hover: hover) {
+  .clients .client:hover img {
+    filter: grayscale(0);
+  }
+  .clients .client:hover .client-info {
+    display: block;
+  }
+}
 .services {
   background-color: rgb(247, 247, 247);
   display: grid;
