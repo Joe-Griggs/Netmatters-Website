@@ -93,38 +93,33 @@
         }
     }
 
-    .hamburger svg {
+    .hamburger span {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 40px;
-        height: 32px;
-        transition: opacity 600ms ease, transform 600ms ease;
-
-        path {
-            fill: none;
-            stroke: white;
-        }
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+        transition: 0.3s ease;
     }
 
-    .hamburger .menu-icon {
-        opacity: 1;
-        transform: translate(-50%, -50%) rotate(0) scale(1);
+    .hamburger span:first-child {
+        transform: translateY(-9px) rotate(0);
     }
 
-    .hamburger .close-icon {
+    .hamburger span:last-child {
+        transform: translateY(9px) rotate(0);
+    }
+
+    #nav-toggle:checked + .hamburger span:first-child {
+        transform: translateY(0) rotate(225deg);
+    }
+
+    #nav-toggle:checked + .hamburger span:nth-child(2) {
         opacity: 0;
-        transform: translate(-50%, -50%) rotate(-90deg) scale(.8);
     }
 
-    #nav-toggle:checked + .hamburger .menu-icon {
-        opacity: 0;
-        transform: translate(-50%, -50%) rotate(90deg) scale(.8);
-    }
-
-    #nav-toggle:checked + .hamburger .close-icon {
-        opacity: 1;
-        transform: translate(-50%, -50%) rotate(0) scale(1);
+    #nav-toggle:checked + .hamburger span:last-child {
+        transform: translateY(0) rotate(135deg);
     }
 
     .search{

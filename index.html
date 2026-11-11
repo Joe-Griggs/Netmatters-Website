@@ -36,7 +36,7 @@
                 </div>
                 <div id="side-nav">
                     <input type="checkbox" id="nav-toggle">
-                    <label for="nav-toggle" class="hamburger"><svg class="menu-icon" aria-hidden="true" viewBox="0 0 32 32"><path d="M4 8H28M4 16H28M4 24H28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><svg class="close-icon" aria-hidden="true" viewBox="0 0 32 32"><path d="M7 7L25 25M25 7L7 25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></label>
+                    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
                 </div>
                     <div class="search">
                         <input type="search" id="search-bar" placeholder="Search..."><button type="button" aria-label="Search"><svg aria-hidden="true" viewBox="0 0 40 32"><use href="SVG/symbol-defs.svg#icon-search"></use></svg></button>
@@ -414,45 +414,54 @@
 
             <section class="latest-news"><!--2 latest news articles-->
                 <h2>Latest News</h2>
-                <a href="#">
-                    <div class="news">
-                        <img src="img/bespoke-software.jpeg" alt="talking about software">
-                        <h3>How Much Could Bespoke Software Add to Your E...</h3>
-                        <p>If you’re a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
-                        <span class="read-more">READ MORE</span>
-                        <div class="posts">
-                            <img class="avatar" src="img/netmatters-avatar.png" alt="avatar of netmatters">
-                            <p class="posted">Posted by Netmatters</p>
-                            <p class="date">27th June 2025</p>
+                <div class="news-card">
+                    <a class="category" href="#">INSIGHTS</a>
+                    <a href="#">
+                        <div class="news">
+                            <img src="img/bespoke-software.jpeg" alt="talking about software">
+                            <h3>How Much Could Bespoke Software Add to Your E...</h3>
+                            <p>If you’re a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
+                            <span class="read-more">READ MORE</span>
+                            <div class="posts">
+                                <img class="avatar" src="img/netmatters-avatar.png" alt="avatar of netmatters">
+                                <p class="posted">Posted by Netmatters</p>
+                                <p class="date">27th June 2025</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="news">
-                        <img src="img/ai-intergration.jpeg" alt="ai ai-integration">
-                        <h3>How Can AI Benefit My Business?</h3>
-                        <p>The idea of integrating AI into your business operations may seem daunting, but there are undeniable...</p>
-                        <span class="read-more">READ MORE</span>
-                        <div class="posts">
-                            <img class="avatar" src="img/netmatters-avatar.png" alt="avatar of netmatters">
-                            <p class="posted">Posted by Netmatters</p>
-                            <p class="date">26th June 2025</p>
+                    </a>
+                </div>
+                <div class="news-card">
+                    <a class="category" href="#">INSIGHTS</a>
+                    <a href="#">
+                        <div class="news">
+                            <img src="img/ai-intergration.jpeg" alt="ai ai-integration">
+                            <h3>How Can AI Benefit My Business?</h3>
+                            <p>The idea of integrating AI into your business operations may seem daunting, but there are undeniable...</p>
+                            <span class="read-more">READ MORE</span>
+                            <div class="posts">
+                                <img class="avatar" src="img/netmatters-avatar.png" alt="avatar of netmatters">
+                                <p class="posted">Posted by Netmatters</p>
+                                <p class="date">26th June 2025</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="career">
-                        <img src="img/1stline.png" alt="job offer">
-                        <h3>1st Line Technician</h3>
-                        <p>Salary Range £25,000 -£29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham,...</p>
-                        <span class="read-more">READ MORE</span>
-                        <div class="posts">
-                            <img class="avatar" src="img/netmatters-avatar.png" alt="avatar of netmatters">
-                            <p class="posted">Posted by Bethany Shakespeare</p>
-                            <p class="date">20th June 2025</p>
+                    </a>
+                </div>
+                <div class="news-card">
+                    <a class="category category-careers" href="#">CAREERS</a>
+                    <a href="#">
+                        <div class="career">
+                            <img src="img/1stline.png" alt="job offer">
+                            <h3>1st Line Technician</h3>
+                            <p>Salary Range £25,000 -£29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham,...</p>
+                            <span class="read-more">READ MORE</span>
+                            <div class="posts">
+                                <img class="avatar" src="img/netmatters-avatar.png" alt="avatar of netmatters">
+                                <p class="posted">Posted by Bethany Shakespeare</p>
+                                <p class="date">20th June 2025</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
                 <a id="view-all" href="#">View All<svg class="arrow" aria-hidden="true" viewBox="0 0 32 32"><use href="SVG/symbol-defs.svg#icon-arrow-right2"></use></svg></a>
             </section>
 

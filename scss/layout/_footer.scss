@@ -62,6 +62,7 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        padding-left: 15px;
 
         img {
             width: min(16em, 100%);
@@ -176,6 +177,10 @@ footer {
 @media (min-width: $breakpoint-m) {
     .footer-info {
         margin: 0 3%;
+    }
+
+    #nmlogo {
+        padding-left: 0;
     }
 
     .socials h4 {
