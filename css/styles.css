@@ -757,14 +757,26 @@ footer .copyright p {
 .clients .client .case-study--orange {
   background-color: #F7B322;
 }
+.clients .client .case-study--orange:hover {
+  background-color: #d49b1f;
+}
 .clients .client .case-study--blue {
   background-color: #4183D7;
+}
+.clients .client .case-study--blue:hover {
+  background-color: #3770b9;
 }
 .clients .client .case-study--green {
   background-color: #2ECC71;
 }
+.clients .client .case-study--green:hover {
+  background-color: #239e57;
+}
 .clients .client .case-study--purple {
   background-color: #926FB1;
+}
+.clients .client .case-study--purple:hover {
+  background-color: #6f5486;
 }
 .clients .client .case-study-arrow {
   font-size: 22px;

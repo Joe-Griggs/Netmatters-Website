@@ -74,22 +74,40 @@
             border-radius: 3px;
             font-size: 16px;
             font-weight: $font-weight-medium;
+
+
         }
 
         .case-study--orange {
             background-color: #F7B322;
+
+            &:hover {
+                background-color: #d49b1f;
+            }
         }
 
         .case-study--blue {
             background-color: #4183D7;
+
+            &:hover {
+                background-color: #3770b9;
+            }
         }
 
         .case-study--green {
             background-color: #2ECC71;
+
+            &:hover {
+                background-color: #239e57;
+            }
         }
 
         .case-study--purple {
             background-color: #926FB1;
+
+            &:hover {
+                background-color: #6f5486;
+            }
         }
 
         .case-study-arrow {
