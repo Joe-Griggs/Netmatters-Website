@@ -32,6 +32,7 @@
             filter: grayscale(1);
         }
 
+        //positions the company details above each logo
         .client-info {
             display: none;
             position: absolute;
@@ -120,6 +121,7 @@
 }
 
 @media (max-width: 991px) {
+    //opens the company details when a logo is tapped
     .clients .client.is-open {
         img {
             filter: grayscale(0);
@@ -132,6 +134,7 @@
 }
 
 @media (min-width: $breakpoint-l) and (hover: hover) {
+    //opens the company details when a logo is hovered
     .clients .client:hover {
         img {
             filter: grayscale(0);

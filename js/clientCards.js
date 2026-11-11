@@ -6,6 +6,7 @@ clientCards.forEach(function(card) {
         event.preventDefault();
 
         if (smallScreen.matches) {
+            //closes the other cards before opening the selected one
             const shouldOpen = !card.classList.contains('is-open');
             clientCards.forEach(function(otherCard) {
                 otherCard.classList.remove('is-open');

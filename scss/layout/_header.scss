@@ -390,6 +390,7 @@ body {
     }
 }
 
+//sets the position and width of the pop out nav
 .side-nav {
     position: fixed;
     z-index: 0;
@@ -496,6 +497,7 @@ body > .header {
 
 
 @media (max-width: ($breakpoint-l - 1px)) {
+    //makes the pop out nav wider on smaller screens
     body {
         --side-nav-width: min(280px, 80vw);
     }
