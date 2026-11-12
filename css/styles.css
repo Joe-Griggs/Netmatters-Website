@@ -270,6 +270,7 @@ footer .copyright p {
   display: inline-flex;
   align-items: center;
   padding: 16px 25px;
+  width: fit-content;
   font-size: 1.2rem;
   color: white;
   background-color: rgba(27, 27, 27, 0.35);
@@ -281,12 +282,18 @@ footer .copyright p {
   display: inline-flex;
   align-items: center;
   padding: 16px 25px;
+  width: fit-content;
   font-size: 1.2rem;
   color: white;
   background-color: rgba(27, 27, 27, 0.35);
   border-radius: 6px;
   border: none;
   text-decoration: none;
+}
+.welcome-btn #why-btn,
+.welcome-btn #culture-btn {
+  width: fit-content;
+  justify-self: start;
 }
 
 .stars {
@@ -342,6 +349,7 @@ footer .copyright p {
   display: inline-flex;
   align-items: center;
   padding: 16px 25px;
+  width: fit-content;
   font-size: 1.2rem;
   color: white;
   background-color: #4387f6;
@@ -356,6 +364,7 @@ footer .copyright p {
   display: inline-flex;
   align-items: center;
   padding: 16px 25px;
+  width: fit-content;
   font-size: 1.2rem;
   color: white;
   background-color: #00b67b;
@@ -705,7 +714,7 @@ footer .copyright p {
   padding: 0;
   margin: 0;
 }
-.clients > img:hover {
+.clients img:hover {
   filter: grayscale(0);
 }
 .clients .client {
@@ -730,12 +739,22 @@ footer .copyright p {
   text-align: center;
   z-index: 1;
 }
+.clients .client .client-info::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -40px;
+  right: -40px;
+  height: 30px;
+}
 .clients .client .client-info::after {
   content: "";
   position: absolute;
   top: 100%;
   left: 50%;
-  border: 20px solid transparent;
+  border-width: 12px 24px 0;
+  border-style: solid;
+  border-color: transparent;
   border-top-color: #323544;
   transform: translateX(-50%);
 }

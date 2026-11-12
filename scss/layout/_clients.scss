@@ -52,12 +52,23 @@
             z-index: 1;
         }
 
+        .client-info::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: -40px;
+            right: -40px;
+            height: 30px;
+        }
+
         .client-info::after {
             content: "";
             position: absolute;
             top: 100%;
             left: 50%;
-            border: 20px solid transparent;
+            border-width: 12px 24px 0;
+            border-style: solid;
+            border-color: transparent;
             border-top-color: #323544;
             transform: translateX(-50%);
         }

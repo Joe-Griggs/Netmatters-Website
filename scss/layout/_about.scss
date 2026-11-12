@@ -45,6 +45,12 @@
     #culture-btn {
         @include about-buttons;
     }   
+
+    #why-btn,
+    #culture-btn {
+        width: fit-content;
+        justify-self: start;
+    }
 }
 
 .stars {
@@ -103,6 +109,7 @@
         display: inline-flex;
         align-items: center;
         padding: 16px 25px;
+        width: fit-content;
         font-size: 1.2rem;
         color: white;
         background-color: #4387f6;
@@ -119,6 +126,7 @@
         display: inline-flex;
         align-items: center;
         padding: 16px 25px;
+        width: fit-content;
         font-size: 1.2rem;
         color: white;
         background-color: #00b67b;
