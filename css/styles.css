@@ -705,6 +705,9 @@ footer .copyright p {
   padding: 0;
   margin: 0;
 }
+.clients > img:hover {
+  filter: grayscale(0);
+}
 .clients .client {
   position: relative;
   display: block;
